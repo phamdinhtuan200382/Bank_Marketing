@@ -46,130 +46,94 @@ def main():
         link='[Data set link](https://archive.ics.uci.edu/ml/datasets/Bank+Marketing)'
         st.markdown(link,unsafe_allow_html=True)
 
-    model=st.sidebar.selectbox(
-    "Select an ML Model",
-    ("select","Gradient Boost Classifier", "Random Forest Classifier")
-    )
-    if model=="Gradient Boost Classifier":
-        if st.checkbox("Modeling"):
-        
-            klm= """
-    
-    <h4 style="color:white;text-align:center;"> This Is A Model Predicts Customers Deposit Money </h4>
-    
-    """
-            st.markdown(klm,unsafe_allow_html=True)
-        
-        housing=st.sidebar.selectbox("Do the customer have Housing Loan?", ("select",'yes' , 'no'))
-        loan=st.sidebar.selectbox("Do the customer have Personal Loan?",("select",'yes', 'no'))
-        contact=st.sidebar.selectbox("How do the customer prefer to communicate",("select","unknown",'Telephone', 'Cellular'))
-        if housing!="select" and  loan!="select" and contact!="select":
-        
-            dict={"yes":'1',"no":'0'}
-            for  i, j in dict.items():
-                housing=housing.replace(i,j)
-                loan=loan.replace(i,j)
 
-            contact_dict={"unknown":'2',"Cellular":'0',"Telephone":'1'}
-            for  i, j in contact_dict.items():
-                contact=contact.replace(i,j)
+    st.sidebar.header("GRADIENT BOOST CLASSIFIER")   
+    age=st.slider("Enter age of the customer",18,95)
+    age=int(age)
+    age=int(scaler.fit_transform([[age]]))
+
+    job=st.selectbox("Enter the type of job customer do",("select",'housemaid', 'services', 'admin.', 'blue-collar', 'technician',
+    'retired', 'management', 'unemployed', 'self-employed', 'unknown', 'entrepreneur', 'student'))
+    job=int(encoder.fit_transform([[job]]))
         
-        
-            with open("logit_model.pkl",'rb') as f:
-                lr=pickle.load(f)
-        
-            res=str(lr.predict([[int(housing),int(loan),int(contact)]]))
-            dict={"yes":'1',"no":'0'}    
-            for i,j in dict.items():
-                res=res.replace(j,i)
-        else:
-            res="None"
+    marital=st.selectbox("what is customer's marital status?",("select",'married','single' ,'divorced'))
     
-
-          
-      
-       
-        
-    elif model=="Random Forest Classifier":
-        age=st.slider("Enter age of the customer",18,95)
-        age=int(age)
-        age=int(scaler.fit_transform([[age]]))
-
-        job=st.selectbox("Enter the type of job customer do",("select",'housemaid', 'services', 'admin.', 'blue-collar', 'technician',
-       'retired', 'management', 'unemployed', 'self-employed', 'unknown', 'entrepreneur', 'student'))
-        job=int(encoder.fit_transform([[job]]))
-           
-        marital=st.selectbox("what is customer's marital status?",("select",'married','single' ,'divorced'))
-        
-        education=st.selectbox("Enter customer's education level",("select",'tertiary', 'secondary' ,'unknown' ,'primary'))
-        
-        targeted=st.selectbox("Do the customer have target?", ("select",'yes' , 'no'))
-        
-        default=st.selectbox("Do the customer have credit in default?", ("select",'yes' , 'no'))
-                
-        housing=st.selectbox("Do the customer have Housing Loan?", ("select",'yes' , 'no'))
-        
-        loan=st.selectbox("Do the customer have Personal Loan?",("select",'yes', 'no'))
-        
-        contact=st.radio("How do you prefer to communicate",("select","unknown",'Telephone', 'Cellular'))
-        month=st.selectbox("Which month the customer was last contacted in?",("select",'Jan',"Feb","March",'April',"May","June","July","Aug","Sep","Oct","Nov","Dec"))
-        
-        if month  in ["Jan","March","May","July","Aug","Oct","Dec"] :
-            day=st.slider("Enter Day the customer was contacted ",1,31)
-            day=int(day)
+    education=st.selectbox("Enter customer's education level",("select",'tertiary', 'secondary' ,'unknown' ,'primary'))
+    
+    #targeted=st.selectbox("Do the customer have target?", ("select",'yes' , 'no'))
+    
+    default=st.selectbox("Do the customer have credit in default?", ("select",'yes' , 'no'))
             
-        elif month=="Feb":
-            day=st.slider("Enter Day the customer was contacted ",1,29)
-            day=int(day)
-        else:
-            day=st.slider("Enter the Day the customer was contacted ",1,30)
-            day=int(day)
+    housing=st.selectbox("Do the customer have Housing Loan?", ("select",'yes' , 'no'))
+    
+    loan=st.selectbox("Do the customer have Personal Loan?",("select",'yes', 'no'))
+    
+    contact=st.radio("How do you prefer to communicate",("select","unknown",'Telephone', 'Cellular'))
 
+    month=st.selectbox("Which month the customer was last contacted in?",("select",'Jan',"Feb","March",'April',"May","June","July","Aug","Sep","Oct","Nov","Dec"))
+    
+    day_of_week=st.radio("Which day of week the customer was contacted in",("select","mon",'tue', 'wed','thus','fri'))
+
+
+    duration=st.text_input("Enter last contact duration with the customer in sec?",0,4918)
+    if not duration:
+        st.warning("Enter Duration Period")
         
-        day=int(scaler.fit_transform([[day]]))
-        duration=st.text_input("Enter last contact duration with the customer in sec?",0,4918)
-        if not duration:
-            st.warning("Enter Duration Period")
-            
+    else:
+        if duration.isalpha() and duration.isalnum():
+            st.warning("Please enter an integer number")
+            pass
         else:
-            if duration.isalpha() and duration.isalnum():
-                st.warning("Please enter an integer number")
-                pass
-            else:
-                duration=int(duration)
-                if duration>4918 or duration<0:
-                    st.warning("Please enter an number between 0 & 4918")
-                duration=int(scaler.fit_transform([[duration]]))
-        campaign=st.slider("Enter number of contacts performed during this campaign and for this client",1,63)
-        campaign=int(campaign)
-        
-        campaign=int(scaler.fit_transform([[campaign]]))
-        if marital!="select" and education!="select" and targeted!="select" and default!="select" and housing!="select" and loan!="select" and contact!="select" and month!="select":
-            marital=int(encoder.fit_transform([[marital]]))
-            education=int(encoder.fit_transform([[education]]))
-            targeted=int(encoder.fit_transform([[targeted]]))
-            default=int(encoder.fit_transform([[default]]))
-            housing=int(encoder.fit_transform([[housing]]))
-            loan=int(encoder.fit_transform([[loan]]))
-            contact=int(encoder.fit_transform([[contact]]))
-            month=int(encoder.fit_transform([[month]]))
+            duration=int(duration)
+            if duration>4918 or duration<0:
+                st.warning("Please enter an number between 0 & 4918")
+            duration=int(scaler.fit_transform([[duration]]))
 
-            with open("random_model.pkl",'rb') as f:
-                rf=pickle.load(f)
-            res=rf.predict([[age,job,marital,education,targeted,default,housing,loan,contact,day,month,duration,campaign]])
-            res=str(res)
-            dict={"yes":'1',"no":'0'}    
-            for i,j in dict.items():
-                res=res.replace(j,i)
-        else:
-            res="None"
+    campaign=st.slider("Enter number of contacts performed during this campaign and for this client",1,63)
+    campaign=int(campaign)
+    campaign=int(scaler.fit_transform([[campaign]]))
 
-        
+    pdays=st.slider("Enter number of days that passed by after the client was last contacted from a previous campaign",0,27)
+    pdays=int(pdays)
+    pdays=int(scaler.fit_transform([[pdays]]))
 
+    previous=st.slider("Enter number of contacts performed before this campaign and for this client",0,7)
+    previous=int(previous)
+    previous=int(scaler.fit_transform([[previous]]))
+
+    poutcome=st.radio("Enter outcome of the previous marketing campaign",("select",'failure','nonexistent','success'))
+
+    emp_var_rate= int(0.081886)
+
+    cons_price_idx = int(93.575664)
+
+    cons_conf_idx = int(-40.502600)
+
+    euribor3m = int(3.621291)
+    
+    nr_employed = int(5167.035911)
+
+    if marital!="select" and education!="select" and default!="select" and housing!="select" and loan!="select" and contact!="select" and month!="select" and day_of_week!="select" and poutcome!="select":
+        marital=int(encoder.fit_transform([[marital]]))
+        education=int(encoder.fit_transform([[education]]))
+        default=int(encoder.fit_transform([[default]]))
+        housing=int(encoder.fit_transform([[housing]]))
+        loan=int(encoder.fit_transform([[loan]]))
+        contact=int(encoder.fit_transform([[contact]]))
+        month=int(encoder.fit_transform([[month]]))
+        day_of_week=int(encoder.fit_transform([[day_of_week]]))
+        poutcome=int(encoder.fit_transform([[poutcome]]))
+
+        with open("D:\\random_model.pkl",'rb') as f:
+            rf=pickle.load(f)
+        res=rf.predict([[age,job,marital,education,default,housing,loan,contact,month,day_of_week,duration,campaign,pdays,previous,poutcome,emp_var_rate,cons_price_idx,cons_conf_idx,euribor3m,nr_employed]])
+        res=str(res)
+        dict={"yes":'1',"no":'0'}    
+        for i,j in dict.items():
+            res=res.replace(j,i)
     else:
         res="None"
-           
-    return res
+
 
     
 
