@@ -6,6 +6,7 @@ import warnings
 warnings.filterwarnings("ignore")
 import streamlit as st
 import pickle
+import sys
 from sklearn.preprocessing import OrdinalEncoder
 encoder=OrdinalEncoder()
         
@@ -16,6 +17,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score,classification_report
 
 
+print(sys.path)
 data=pd.read_csv("D:\\bank-additional-full.csv", sep = ";")
 def main():
     
@@ -58,7 +60,7 @@ def main():
         
     marital=st.selectbox("what is customer's marital status?",("select",'married','single' ,'divorced'))
     
-    education=st.selectbox("Enter customer's education level",("select",'tertiary', 'secondary' ,'unknown' ,'primary'))
+    education=st.selectbox("Enter customer's education level",("select",'basic.4y', 'basic.6y' ,'basic.9y' ,'high.school','professional.course','university.degree','unknown','illiterate'))
     
     #targeted=st.selectbox("Do the customer have target?", ("select",'yes' , 'no'))
     
@@ -74,20 +76,6 @@ def main():
     
     day_of_week=st.radio("Which day of week the customer was contacted in",("select","mon",'tue', 'wed','thus','fri'))
 
-
-    duration=st.text_input("Enter last contact duration with the customer in sec?",0,4918)
-    if not duration:
-        st.warning("Enter Duration Period")
-        
-    else:
-        if duration.isalpha() and duration.isalnum():
-            st.warning("Please enter an integer number")
-            pass
-        else:
-            duration=int(duration)
-            if duration>4918 or duration<0:
-                st.warning("Please enter an number between 0 & 4918")
-            duration=int(scaler.fit_transform([[duration]]))
 
     campaign=st.slider("Enter number of contacts performed during this campaign and for this client",1,63)
     campaign=int(campaign)
@@ -111,7 +99,6 @@ def main():
 
     euribor3m = int(3.621291)
     
-    nr_employed = int(5167.035911)
 
     if marital!="select" and education!="select" and default!="select" and housing!="select" and loan!="select" and contact!="select" and month!="select" and day_of_week!="select" and poutcome!="select":
         marital=int(encoder.fit_transform([[marital]]))
@@ -124,9 +111,9 @@ def main():
         day_of_week=int(encoder.fit_transform([[day_of_week]]))
         poutcome=int(encoder.fit_transform([[poutcome]]))
 
-        with open("D:\\random_model.pkl",'rb') as f:
+        with open("D:\\optimal_model.pkl",'rb') as f:
             rf=pickle.load(f)
-        res=rf.predict([[age,job,marital,education,default,housing,loan,contact,month,day_of_week,duration,campaign,pdays,previous,poutcome,emp_var_rate,cons_price_idx,cons_conf_idx,euribor3m,nr_employed]])
+        res=rf.predict([[age,job,marital,education,default,housing,loan,contact,month,day_of_week,campaign,pdays,previous,poutcome,emp_var_rate,cons_price_idx,cons_conf_idx,euribor3m,nr_employed]])
         res=str(res)
         dict={"yes":'1',"no":'0'}    
         for i,j in dict.items():
@@ -148,9 +135,11 @@ if __name__=='__main__':
     if st.sidebar.button("Show Prediction"):
         st.sidebar.subheader("The predicted response of customer or client to subscribe a term deposit is")
         st.sidebar.success(Res)
-    
-    
-    
+        st.sidebar.header('   ')
+        st.sidebar.image('https://media.giphy.com/media/jO2PObgv4R3JrSBFul/giphy.gif')
+
+
+        
     
     if st.button("Thanks") :
         st.text("Thank you for visiting  and happy learning :)")
