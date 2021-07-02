@@ -70,11 +70,12 @@ def main():
     
     loan=st.selectbox("Do the customer have Personal Loan?",("select",'yes', 'no'))
     
-    contact=st.radio("How do you prefer to communicate",("select","unknown",'Telephone', 'Cellular'))
+    contact=st.radio("How do you prefer to communicate",("select","unknown",'telephone', 'cellular'))
 
-    month=st.selectbox("Which month the customer was last contacted in?",("select",'Jan',"Feb","March",'April',"May","June","July","Aug","Sep","Oct","Nov","Dec"))
+    month=st.selectbox("Which month the customer was last contacted in?",("select",'jan',"feb","mar",'apr',"may","jun","jul","aug","sep","oct","nov","dec"))
     
     day_of_week=st.radio("Which day of week the customer was contacted in",("select","mon",'tue', 'wed','thus','fri'))
+
 
 
     campaign=st.slider("Enter number of contacts performed during this campaign and for this client",1,63)
@@ -113,7 +114,7 @@ def main():
 
         with open("D:\\optimal_model.pkl",'rb') as f:
             rf=pickle.load(f)
-        res=rf.predict([[age,job,marital,education,default,housing,loan,contact,month,day_of_week,campaign,pdays,previous,poutcome,emp_var_rate,cons_price_idx,cons_conf_idx,euribor3m,nr_employed]])
+        res=rf.predict([[age,job,marital,education,default,housing,loan,contact,month,day_of_week,campaign,pdays,previous,poutcome,emp_var_rate,cons_price_idx,cons_conf_idx,euribor3m]])
         res=str(res)
         dict={"yes":'1',"no":'0'}    
         for i,j in dict.items():
