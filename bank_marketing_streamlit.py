@@ -15,7 +15,22 @@ from sklearn.preprocessing import MinMaxScaler
 scaler = MinMaxScaler()
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score,classification_report
+import base64
 
+main_bg = "D://photo.jfif"
+main_bg_ext = "jfif"
+
+
+
+st.markdown(
+    f"""
+    <style>
+    .reportview-container {{
+        background: url(data:image/{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()})
+    }}
+    """,
+    unsafe_allow_html=True
+)
 
 print(sys.path)
 data=pd.read_csv("D:\\bank-additional-full.csv", sep = ";")
