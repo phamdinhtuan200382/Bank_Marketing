@@ -67,7 +67,7 @@ def main():
     st.sidebar.header("GRADIENT BOOST CLASSIFIER")   
     age=st.slider("Enter age of the customer",18,95)
     age=int(age)
-    age=int(scaler.fit_transform([[age]]))
+    # age=int(scaler.fit_transform([[age]]))
 
     job=st.selectbox("Enter the type of job customer do",("select",'housemaid', 'services', 'admin.', 'blue-collar', 'technician',
     'retired', 'management', 'unemployed', 'self-employed', 'unknown', 'entrepreneur', 'student'))
@@ -89,34 +89,47 @@ def main():
 
     month=st.selectbox("Which month the customer was last contacted in?",("select",'jan',"feb","mar",'apr',"may","jun","jul","aug","sep","oct","nov","dec"))
     
-    day_of_week=st.radio("Which day of week the customer was contacted in",("select","mon",'tue', 'wed','thus','fri'))
+    day_of_week=st.radio("Which day of week the customer was contacted in",("select","mon",'tue', 'wed','thu','fri'))
 
+    duration=st.text_input("Enter last contact duration with the customer in sec?",0,4918)
+    if not duration:
+        st.warning("Enter Duration Period")
+        
+    else:
+        if duration.isalpha() and duration.isalnum():
+            st.warning("Please enter an integer number")
+            pass
+        else:
+            duration=int(duration)
+            if duration>4918 or duration<0:
+                st.warning("Please enter an number between 0 & 4918")
+            # duration=int(scaler.fit_transform([[duration]]))
 
 
     campaign=st.slider("Enter number of contacts performed during this campaign and for this client",1,63)
     campaign=int(campaign)
-    campaign=int(scaler.fit_transform([[campaign]]))
+    # campaign=int(scaler.fit_transform([[campaign]]))
 
     pdays=st.slider("Enter number of days that passed by after the client was last contacted from a previous campaign",0,27)
     pdays=int(pdays)
-    pdays=int(scaler.fit_transform([[pdays]]))
+    # pdays=int(scaler.fit_transform([[pdays]]))
 
     previous=st.slider("Enter number of contacts performed before this campaign and for this client",0,7)
     previous=int(previous)
-    previous=int(scaler.fit_transform([[previous]]))
+    # previous=int(scaler.fit_transform([[previous]]))
 
     poutcome=st.radio("Enter outcome of the previous marketing campaign",("select",'failure','nonexistent','success'))
 
-    emp_var_rate= int(0.081886)
+    emp_var_rate= int(1.100)
 
-    cons_price_idx = int(93.575664)
+    cons_price_idx = int(93.749)
 
-    cons_conf_idx = int(-40.502600)
+    cons_conf_idx = int(-41.8)
 
-    euribor3m = int(3.621291)
+    euribor3m = int(4.857)
     
 
-    if marital!="select" and education!="select" and default!="select" and housing!="select" and loan!="select" and contact!="select" and month!="select" and day_of_week!="select" and poutcome!="select":
+    if marital!="select" and education!="select" and default!="select" and housing!="select" and loan!="select" and contact!="select" and month!="select" and day_of_week!="select" and duration!="sellect" and poutcome!="select":
         marital=int(encoder.fit_transform([[marital]]))
         education=int(encoder.fit_transform([[education]]))
         default=int(encoder.fit_transform([[default]]))
@@ -129,7 +142,7 @@ def main():
 
         with open("D:\\optimal_model.pkl",'rb') as f:
             rf=pickle.load(f)
-        res=rf.predict([[age,job,marital,education,default,housing,loan,contact,month,day_of_week,campaign,pdays,previous,poutcome,emp_var_rate,cons_price_idx,cons_conf_idx,euribor3m]])
+        res=rf.predict([[age,job,marital,education,default,housing,loan,contact,month,duration,campaign,pdays,previous,poutcome,emp_var_rate,cons_price_idx,cons_conf_idx,euribor3m]])
         res=str(res)
         dict={"yes":'1',"no":'0'}    
         for i,j in dict.items():
