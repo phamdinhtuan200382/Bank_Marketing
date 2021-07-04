@@ -16,7 +16,7 @@ scaler = MinMaxScaler()
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score,classification_report
 
-# st.set_page_config(layout="wide")
+st.set_page_config(layout="wide")
 # Load data
 file_path = "data/bank-additional-full.csv"
 na_lst = ["NA","","#NA","unknown"]
