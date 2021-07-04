@@ -118,10 +118,8 @@ def visualize_predicted_result(df, target):
     st.text("The Predicted Percentage Of Success");
     data = df.groupby(target).size().sort_values(ascending=False)
     label_dict = {1:'yes',0:'no'}
-    fig = plt.figure(figsize=(1,1))
-    
-    plt.pie(x=data , autopct="%.1f%%", labels= [label_dict[val] for val in data.index.tolist()]);
-
+    fig = plt.figure()
+    plt.pie(x=data , autopct="%.1f%%",pctdistance=0.5, labels= [label_dict[val] for val in data.index.tolist()], radius=0.5);
     st.pyplot(fig)  
     
 def predict_data_file(file):
@@ -216,7 +214,9 @@ def main():
             st.write("Upload a .csv or .xlsx file to get started")
         else:
             predict_data_file(file)
-           
+    if st.button("Thanks") :
+        st.text("Thank you for visiting  and happy learning :)")
+        st.balloons()      
 main()
 
 ## Run: streamlit run apps/bank_marketing_streamlit.py
