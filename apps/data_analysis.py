@@ -367,7 +367,7 @@ pre_process_2 = """
 <p><br></p>
 """
 metric = """
-<p style="line-height: 1.5;"><span style="font-size: 14px;">Mặc d&ugrave; nh&oacute;m sử dụng 04 c&ocirc;ng thức t&iacute;nh AC phổ biến nhất l&agrave;: Accuracy, Precision, Recall v&agrave; F1. Tuy nhi&ecirc;n, v&igrave; mục ti&ecirc;u cuối c&ugrave;ng l&agrave; l&agrave;m thế n&agrave;o để tiếp cận được nhiều kh&aacute;ch h&agrave;ng tiềm năng nhất - hay n&oacute;i c&aacute;ch kh&aacute;c l&agrave; tr&aacute;nh việc bỏ s&oacute;t kh&aacute;ch h&agrave;ng tiềm năng, nh&oacute;m quyết định sẽ quan t&acirc;m nhất đến kết quả của Recall.</span></p>
+<p style="line-height: 1.5;"><span style="font-size: 14px;">Mặc d&ugrave; nh&oacute;m sử dụng 04 c&ocirc;ng thức t&iacute;nh AC phổ biến nhất l&agrave;: Accuracy, Precision, Recall v&agrave; F1. Tuy nhi&ecirc;n, v&igrave; mục ti&ecirc;u cuối c&ugrave;ng l&agrave; l&agrave;m thế n&agrave;o để tiếp cận được nhiều kh&aacute;ch h&agrave;ng tiềm năng nhất - hay n&oacute;i c&aacute;ch kh&aacute;c l&agrave; tr&aacute;nh việc bỏ s&oacute;t kh&aacute;ch h&agrave;ng tiềm năng, nh&oacute;m quyết định sẽ quan t&acirc;m nhất đến kết quả của Recall và Accuracy.</span></p>
 """
 
 overview_1 = """
@@ -380,12 +380,12 @@ overview_2 = """
 """
 
 result_analysis = """
-<p style="line-height: 1.5;"><span style="font-size: 14px;">Nhận x&eacute;t chung:</span></p>
+<p style="line-height: 1.5;"><span style="font-size: 14px; font-family: Calibri, sans-serif;">Nhận x&eacute;t chung:</span></p>
 <ul style="list-style-type: square;">
-    <li style="line-height: 1.5;"><span style="font-size: 14px;">Nh&igrave;n v&agrave;o 2 cột AC đầu ti&ecirc;n, ta c&oacute; thể thấy với 4 model được chọn lọc để ph&acirc;n t&iacute;ch AC đều cho kết quả tốt tr&ecirc;n cả tập train v&agrave; tập test. Ngo&agrave;i ra sự kh&aacute;c biệt về AC giữa tập train v&agrave; tập test tr&ecirc;n mỗi model kh&ocirc;ng kh&aacute;c biệt nhiều, chứng tỏ kh&ocirc;ng c&oacute; sự kh&aacute;c thường về output của model.</span></li>
-    <li style="line-height: 1.5;"><span style="font-size: 14px;">Nh&igrave;n v&agrave;o 03 cột AC ở cuối, c&oacute; thể nhận thấy khi d&ugrave;ng XGBoost Classifier c&ugrave;ng với resampled data cho kết quả cao nhất tr&ecirc;n cả 3 chỉ số Precision, Recall v&agrave; F1 tr&ecirc;n biến y = &quot;Yes&quot;, đồng thời kết quả Accuracy của model cũng cao thứ hai so với c&aacute;c model kh&aacute;c..</span></li>
+    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Nh&igrave;n v&agrave;o 2 cột AC đầu ti&ecirc;n, ta c&oacute; thể thấy với 4 model được chọn lọc để ph&acirc;n t&iacute;ch AC đều cho kết quả tốt tr&ecirc;n cả tập train v&agrave; tập test. Ngo&agrave;i ra sự kh&aacute;c biệt về AC giữa tập train v&agrave; tập test tr&ecirc;n mỗi model kh&ocirc;ng kh&aacute;c biệt nhiều, chứng tỏ kh&ocirc;ng c&oacute; sự kh&aacute;c thường về output của model.</span></span></li>
+    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Nh&igrave;n v&agrave;o 03 cột AC ở cuối, c&oacute; thể nhận thấy khi d&ugrave;ng XGBoost Classifier c&ugrave;ng với resampled data cho kết quả cao nhất tr&ecirc;n cả 3 chỉ số Precision, Recall v&agrave; F1 tr&ecirc;n biến y = &quot;Yes&quot;, đồng thời kết quả Accuracy của model cũng cao thứ hai so với c&aacute;c model kh&aacute;c..</span></span></li>
 </ul>
-<p style="line-height: 1.5;"><span style="font-size: 14px;">-&gt; Nh&oacute;m quyết định sử dụng model </span><span style="color: rgb(0, 0, 0); font-family: Times; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">XGBoost Classifier with under resampled data v&agrave;o thực tế.</span></p>
+<p style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">-&gt; Nh&oacute;m quyết định sử dụng model </span></span><span style="color: rgb(0, 0, 0); font-family: Calibri, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">XGBoost Classifier with under resampled data v&agrave;o thực tế.</span></p>
 """
 
 flow_source = """
@@ -400,6 +400,47 @@ benefit = """
 </ul>
 <p style="line-height: 1.5;"><span style="font-size: 14px;">Khi đ&oacute; kh&aacute;ch h&agrave;ng c&oacute; thể t&iacute;nh to&aacute;n lợi nhuận dựa v&agrave;o m&ocirc; h&igrave;nh t&iacute;nh to&aacute;n b&ecirc;n dưới.</span></p>
 """
+
+decision_tree_note = """
+<p style="line-height: 1.5;"><span style="font-size: 14px; font-family: Calibri, sans-serif;">Ngo&agrave;i ra, mặc d&ugrave; kết quả kh&ocirc;ng cao bằng model với XGBoost, nh&oacute;m vẫn để th&ecirc;m m&ocirc; h&igrave;nh Decision Tree - một m&ocirc; h&igrave;nh kh&aacute; dễ hiểu cho việc đưa ra quyết định để tham khảo th&ecirc;m.</span></p>
+"""
+
+variable_df1 = """
+<ul style="list-style-type: square;">
+    <li style="line-height: 1.5;"><span style="font-size: 14px; font-family: Calibri, sans-serif;">Age: Độ tuổi của kh&aacute;ch h&agrave;ng thời điểm được li&ecirc;n hệ</span></li>
+    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Job: C&ocirc;ng việc của kh&aacute;ch h&agrave;ng</span></span></li>
+    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Marital: T&igrave;nh trạng h&ocirc;n nh&acirc;n&nbsp;</span></span></li>
+    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Education: Tr&igrave;nh độ học vấn cao nhất hiện c&oacute;</span></span></li>
+    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Default: T&igrave;nh trạng nợ xấu</span></span></li>
+    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Housing: T&igrave;nh trạng nh&agrave; ở hiện tại</span></span></li>
+    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Loan: T&igrave;nh trạng nợ</span></span></li>
+    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Contact: C&aacute;ch thức li&ecirc;n hệ của ng&acirc;n h&agrave;ng</span></span></li>
+    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Month: Lần li&ecirc;n hệ cuối c&ugrave;ng trong năm đối với kh&aacute;ch h&agrave;ng n&agrave;y</span></span></li>
+    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Day_of_week: Lần li&ecirc;n hệ cuối c&ugrave;ng trong tuần</span></span></li>
+    <li style="line-height: 1.5;"><span style="font-size: 14px; font-family: Calibri, sans-serif;">Duration: Tổng thời gian gọi điện trong lần li&ecirc;n hệ cuối c&ugrave;ng với kh&aacute;ch h&agrave;ng</span></li>
+    <li style="line-height: 1.5;"><span style="font-size: 14px; font-family: Calibri, sans-serif;">Compaign: Số lần li&ecirc;n hệ đối với kh&aacute;ch h&agrave;ng n&agrave;y v&agrave; trong chiến dịch hiện tại</span></li>
+</ul>
+"""
+
+variable_df2 = """
+<ul style="list-style-type: square;">
+    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Pdays: Số ng&agrave;y tr&ocirc;i qua t&iacute;nh từ lần cuối li&ecirc;n hệ từ chiến dịch trước</span></span></li>
+    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Previous: Số lần li&ecirc;n hệ trước của kh&aacute;ch h&agrave;ng cho chiến dịch trước</span></span></li>
+    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Poutcome: Kết quả của kh&aacute;ch h&agrave;ng với chiến dịch lần trước</span></span></li>
+    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Emp.var.rate: Hệ số thay đổi c&ocirc;ng việc - t&iacute;nh theo qu&yacute;</span></span></li>
+    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Cons.price.idx: Hệ số gi&aacute; ti&ecirc;u d&ugrave;ng - t&iacute;nh theo th&aacute;ng</span></span></li>
+    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Cons.conf.ind: Chỉ số lạc quan thị trường - t&iacute;nh theo th&aacute;ng</span></span></li>
+    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Euribor3m: Tỉ lệ tham chiếu được x&acirc;y dựng từ l&atilde;i suất trung b&igrave;nh m&agrave; c&aacute;c ng&acirc;n h&agrave;ng Ch&acirc;u &Acirc;u cung cấp cho vay ngắn hạn kh&ocirc;ng c&oacute; t&agrave;i sản bảo đảm tr&ecirc;n thị trường li&ecirc;n ng&acirc;n h&agrave;ng)</span></span></li>
+    <li style="line-height: 1.5;"><span style="font-size: 14px; font-family: Calibri, sans-serif;">nr.employed: Số lượng người c&oacute; việc l&agrave;m t&iacute;nh theo qu&yacute;</span></li>
+    <li style="line-height: 1.5;"><span style="font-size: 14px; font-family: Calibri, sans-serif;">y: Quyết định kh&aacute;ch h&agrave;ng về việc gửi tiền tiết kiệm</span></li>
+</ul>
+"""
+
+# comment_decision_tree = """
+
+# """
+
+
 
 def main():
     
@@ -458,6 +499,14 @@ def main():
 
     # DATA OVERVIEW INFORMATION
     st.markdown(h2,unsafe_allow_html=True)
+
+    # Variable definition
+    st.subheader("Định nghĩa biến có trong tập data")
+    my_expander = st.beta_expander("Mở rộng thanh này để thấy thông tin", expanded=True)
+    with my_expander:
+        col1, col2 = st.beta_columns(2)
+        col1.markdown(variable_df1,True)
+        col2.markdown(variable_df2,True)
 
     #show dataframe with filter
     marketing_w_10_rows = marketing_df[0:20]
@@ -609,6 +658,15 @@ def main():
     st.dataframe(result_comparison.style.highlight_max(axis=0))
     st.markdown(result_analysis, True)
 
+    ### Add decision tree image
+    st.markdown(decision_tree_note, True)
+    decisiontree_img = Image.open("image/decision_tree.png")
+    my_expander = st.beta_expander("Decision Tree Result", expanded=True)
+    with my_expander:
+        st.image(decisiontree_img, use_column_width=True)
+        # st.markdown(comment_decision_tree, True)
+
+
     # 4 Benefit calculation
     st.subheader("3. Lợi nhuận dự kiến khi sử dụng mô hình vào thực tế")
     st.markdown(benefit, True)   
@@ -620,10 +678,11 @@ def main():
         if submit:
             st.write(f'Lợi nhuận thu được là: {save_cost}')
 
+    def my_widget(key):
+        st.subheader('Hello there!')
+        clicked = st.button("Click me " + key)
 
-    df = pd.DataFrame(
-    np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4],
-    columns=['lat', 'lon'])
+    
     
     # if add_selectbox == "Email":
     #     st.map(df)
