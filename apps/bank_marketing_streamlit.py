@@ -110,16 +110,17 @@ def quick_predict_client():
             X_test = scaler.transform(client_df)
             
             y_pred = model.predict(X_test)
-            result_str = 'high - potential' if y_pred == 1 else 'low - potential'
+            result_str = 'POTENTIAL' if y_pred == 1 else 'NON-POTENTIAL'
             result ='This is a '+ result_str + ' client for this tele marketing campain'
             st.success(result)
 
 def visualize_predicted_result(df, target):
-    st.subheader("The predicted percentage of success");
+    st.text("The Predicted Percentage Of Success");
     data = df.groupby(target).size().sort_values(ascending=False)
     label_dict = {1:'yes',0:'no'}
-    fig = plt.figure(figsize = (4,3))
-    plt.pie(x=data , autopct="%.1f%%", explode=[0.05]*len(data), labels= [label_dict[val] for val in data.index.tolist()]);
+    fig = plt.figure(figsize=(1,1))
+    
+    plt.pie(x=data , autopct="%.1f%%", labels= [label_dict[val] for val in data.index.tolist()]);
 
     st.pyplot(fig)  
     
@@ -127,7 +128,7 @@ def predict_data_file(file):
     upload_data = get_df(file)
     features = [col for col in marketing_df.columns.tolist() if col != 'y']
     input_data  = upload_data[features]
-    st.markdown('Lis of clients to predict:')
+    st.markdown('List of clients to predict:')
     st.write(input_data)
     
     ## prediction
@@ -146,7 +147,7 @@ def predict_data_file(file):
     
     ## view result
     view_result_option = ['view all',"view successful list", "view unsuccesful list"]
-    view_type_id = st.selectbox('Choose view:',options = view_result_option)
+    view_type_id = st.selectbox('CHOOSE VIEW:',options = view_result_option)
     if (view_type_id == view_result_option[0]):
         st.write(upload_data) 
     else:
