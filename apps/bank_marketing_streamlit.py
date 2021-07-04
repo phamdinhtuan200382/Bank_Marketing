@@ -147,7 +147,7 @@ def predict_data_file(file):
     ## view result
     st.subheader("Choose View:")
     view_result_option = ['View All',"View Successful List", "View Unsuccesful List"]
-    col1, col2, col3, col4, col5, col6 = st.beta_columns(6)
+    col1, col2, col3, col4 = st.beta_columns(4)
     view_type_id = col1.selectbox('',options = view_result_option)
     if (view_type_id == view_result_option[0]):
         st.write(upload_data) 
