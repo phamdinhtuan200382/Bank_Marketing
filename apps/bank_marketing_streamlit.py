@@ -4,7 +4,7 @@ import numpy as np
 # from pandas_profiling import ProfileReport
 # from streamlit_pandas_profiling import st_profile_report
 
-# from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import MinMaxScaler
 import json
 import pickle
 from matplotlib import pyplot as plt
@@ -12,17 +12,16 @@ import seaborn as sns
 pd.plotting.register_matplotlib_converters()
 import warnings
 warnings.filterwarnings("ignore")
-# from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import LabelEncoder
-# from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
-# from sklearn.metrics import precision_recall_curve
-# from sklearn import metrics
-# from xgboost import XGBClassifier
+from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
+from sklearn.metrics import precision_recall_curve
+from sklearn import metrics
+from xgboost import XGBClassifier
 #import scikitplot as skplt
 import matplotlib.pyplot as plt
 import base64
 st.set_page_config(layout="wide")
-
 def transform_pdays(val):
     transform_dict = {999:'not_previously_contacted',7: 'over_a_week',0:'within_a_week'}
     for key in transform_dict.keys():
@@ -112,17 +111,25 @@ def quick_predict_client():
             
             y_pred = model.predict(X_test)
             result_str = 'POTENTIAL' if y_pred == 1 else 'NON-POTENTIAL'
-            result ='This is a '+ result_str + ' customer for this tele marketing campain'
+            result ='This is a '+ result_str + ' client for this tele marketing campain'
             st.success(result)
 
 def visualize_predicted_result(df, target):
     st.subheader("The Predicted Percentage Of Success:")
     data = df.groupby(target).size().sort_values(ascending=False)
     label_dict = {1:'yes',0:'no'}
+<<<<<<< HEAD
     fig = plt.figure(figsize = (3,3))
     plt.pie(x=data , autopct='%.1f%%',  labels= [label_dict[val] for val in data.index.tolist()], pctdistance=0.7, radius=1.1)
     col1, col2, col3 = st.beta_columns(3)
     col2.pyplot(fig)   
+=======
+    
+    fig = plt.figure(figsize = (3,3))
+    plt.pie(x=data , autopct="%.1f%%",  labels= [label_dict[val] for val in data.index.tolist()], pctdistance=0.7, radius=1.1)
+    col1, col2, col3 = st.beta_columns(3)
+    col2.pyplot(fig)  
+>>>>>>> 47e71eb2af9520d2ab5dffe15680a20ddce794dd
     
 def predict_data_file(file):
     upload_data = get_df(file)
@@ -146,9 +153,10 @@ def predict_data_file(file):
     visualize_predicted_result(upload_data, result_col)
     
     ## view result
-    view_result_option = ['View All',"View Successful List", "View Unsuccesful List"]
     st.subheader("Choose View:")
-    view_type_id = st.selectbox('',options = view_result_option)
+    view_result_option = ['View All',"View Successful List", "View Unsuccesful List"]
+    col1, col2, col3, col4, col5, col6 = st.beta_columns(6)
+    view_type_id = col1.selectbox('',options = view_result_option)
     if (view_type_id == view_result_option[0]):
         st.write(upload_data) 
     else:
