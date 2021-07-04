@@ -21,7 +21,7 @@ from xgboost import XGBClassifier
 #import scikitplot as skplt
 import matplotlib.pyplot as plt
 import base64
-
+st.set_page_config(layout="wide")
 def transform_pdays(val):
     transform_dict = {999:'not_previously_contacted',7: 'over_a_week',0:'within_a_week'}
     for key in transform_dict.keys():
@@ -165,7 +165,7 @@ def get_df(file):
       # get extension and read file
   extension = file.name.split('.')[1]
   if extension.upper() == 'CSV':
-    df = pd.read_csv(file,sep = ';')
+    df = pd.read_csv(file,sep = ',')
   elif extension.upper() == 'XLSX':
     df = pd.read_excel(file, engine='openpyxl')
   elif extension.upper() == 'PICKLE':
@@ -184,17 +184,17 @@ scaler = pickle.load(open(scaler_file_path, 'rb'))
 
 # Main function
 def main():
-    main_bg = "image/photo.jfif"
-    main_bg_ext = "jfif"
-    st.markdown(
-    f"""
-    <style>
-    .reportview-container {{
-        background: url(data:image/{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()})
-    }}
-    """,
-    unsafe_allow_html=True
-)
+#     main_bg = "image/photo.jfif"
+#     main_bg_ext = "jfif"
+#     st.markdown(
+#     f"""
+#     <style>
+#     .reportview-container {{
+#         background: url(data:image/{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()})
+#     }}
+#     """,
+#     unsafe_allow_html=True
+# )
     st.title("Bank Marketing Prediction")
     
     htk=  """
@@ -217,4 +217,4 @@ def main():
            
 main()
 
-## Run: streamlit run bank_marketing_streamlit.py
+## Run: streamlit run apps/bank_marketing_streamlit.py
