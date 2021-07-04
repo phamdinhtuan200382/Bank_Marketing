@@ -4,7 +4,7 @@ import numpy as np
 # from pandas_profiling import ProfileReport
 # from streamlit_pandas_profiling import st_profile_report
 
-from sklearn.preprocessing import MinMaxScaler
+# from sklearn.preprocessing import MinMaxScaler
 import json
 import pickle
 from matplotlib import pyplot as plt
@@ -12,16 +12,17 @@ import seaborn as sns
 pd.plotting.register_matplotlib_converters()
 import warnings
 warnings.filterwarnings("ignore")
-from sklearn.preprocessing import StandardScaler
+# from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import LabelEncoder
-from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
-from sklearn.metrics import precision_recall_curve
-from sklearn import metrics
-from xgboost import XGBClassifier
+# from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
+# from sklearn.metrics import precision_recall_curve
+# from sklearn import metrics
+# from xgboost import XGBClassifier
 #import scikitplot as skplt
 import matplotlib.pyplot as plt
 import base64
 st.set_page_config(layout="wide")
+
 def transform_pdays(val):
     transform_dict = {999:'not_previously_contacted',7: 'over_a_week',0:'within_a_week'}
     for key in transform_dict.keys():
