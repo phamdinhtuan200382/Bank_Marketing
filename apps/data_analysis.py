@@ -9,7 +9,7 @@ import streamlit as st
 import pickle
 from sklearn.preprocessing import OrdinalEncoder
 encoder=OrdinalEncoder()
-# from PIL import Image
+from PIL import Image
 # from sklearn.utils import resample
 # from sklearn.preprocessing import MinMaxScaler
 # scaler = MinMaxScaler()
