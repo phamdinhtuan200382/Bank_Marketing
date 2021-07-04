@@ -112,7 +112,7 @@ def quick_predict_client():
             
             y_pred = model.predict(X_test)
             result_str = 'POTENTIAL' if y_pred == 1 else 'NON-POTENTIAL'
-            result ='This is a '+ result_str + ' client for this tele marketing campain'
+            result ='This is a '+ result_str + ' customer for this tele marketing campain'
             st.success(result)
 
 def visualize_predicted_result(df, target):
