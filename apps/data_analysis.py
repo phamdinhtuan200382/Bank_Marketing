@@ -9,12 +9,12 @@ import streamlit as st
 import pickle
 from sklearn.preprocessing import OrdinalEncoder
 encoder=OrdinalEncoder()
-from PIL import Image
-from sklearn.utils import resample
-from sklearn.preprocessing import MinMaxScaler
-scaler = MinMaxScaler()
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score,classification_report
+# from PIL import Image
+# from sklearn.utils import resample
+# from sklearn.preprocessing import MinMaxScaler
+# scaler = MinMaxScaler()
+# from sklearn.model_selection import train_test_split
+# from sklearn.metrics import accuracy_score,classification_report
 
 st.set_page_config(layout="wide")
 # Load data
