@@ -115,11 +115,12 @@ def quick_predict_client():
             st.success(result)
 
 def visualize_predicted_result(df, target):
+    st.subheader("The predicted percentage of success");
     data = df.groupby(target).size().sort_values(ascending=False)
     label_dict = {1:'yes',0:'no'}
     fig = plt.figure(figsize = (4,3))
     plt.pie(x=data , autopct="%.1f%%", explode=[0.05]*len(data), labels= [label_dict[val] for val in data.index.tolist()]);
-    plt.title("The predicted percentage of success");
+
     st.pyplot(fig)  
     
 def predict_data_file(file):
