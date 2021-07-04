@@ -380,12 +380,12 @@ overview_2 = """
 """
 
 result_analysis = """
-<p style="line-height: 1.5;">Nhận x&eacute;t chung:</p>
+<p style="line-height: 1.5;"><span style="font-size: 14px;">Nhận x&eacute;t chung:</span></p>
 <ul style="list-style-type: square;">
-    <li style="line-height: 1.5;">Nh&igrave;n v&agrave;o 2 cột AC đầu ti&ecirc;n, ta c&oacute; thể thấy với 4 model được chọn lọc để ph&acirc;n t&iacute;ch AC đều cho kết quả tốt tr&ecirc;n cả tập train v&agrave; tập test. Ngo&agrave;i ra sự kh&aacute;c biệt về AC giữa tập train v&agrave; tập test tr&ecirc;n mỗi model kh&ocirc;ng kh&aacute;c biệt nhiều, chứng tỏ kh&ocirc;ng c&oacute; sự kh&aacute;c thường về output của model.</li>
-    <li style="line-height: 1.5;">Nh&igrave;n v&agrave;o 03 cột AC ở cuối, c&oacute; thể nhận thấy khi d&ugrave;ng XGBoost Classifier c&ugrave;ng với resampled data cho kết quả cao nhất tr&ecirc;n cả 3 chỉ số Precision, Recall v&agrave; F1 tr&ecirc;n biến y = &quot;Yes&quot;, đồng thời kết quả Accuracy của model cũng cao thứ hai so với c&aacute;c model kh&aacute;c..</li>
+    <li style="line-height: 1.5;"><span style="font-size: 14px;">Nh&igrave;n v&agrave;o 2 cột AC đầu ti&ecirc;n, ta c&oacute; thể thấy với 4 model được chọn lọc để ph&acirc;n t&iacute;ch AC đều cho kết quả tốt tr&ecirc;n cả tập train v&agrave; tập test. Ngo&agrave;i ra sự kh&aacute;c biệt về AC giữa tập train v&agrave; tập test tr&ecirc;n mỗi model kh&ocirc;ng kh&aacute;c biệt nhiều, chứng tỏ kh&ocirc;ng c&oacute; sự kh&aacute;c thường về output của model.</span></li>
+    <li style="line-height: 1.5;"><span style="font-size: 14px;">Nh&igrave;n v&agrave;o 03 cột AC ở cuối, c&oacute; thể nhận thấy khi d&ugrave;ng XGBoost Classifier c&ugrave;ng với resampled data cho kết quả cao nhất tr&ecirc;n cả 3 chỉ số Precision, Recall v&agrave; F1 tr&ecirc;n biến y = &quot;Yes&quot;, đồng thời kết quả Accuracy của model cũng cao thứ hai so với c&aacute;c model kh&aacute;c..</span></li>
 </ul>
-<p style="line-height: 1.5;">-&gt; Nh&oacute;m quyết định sử dụng model <span style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">XGBoost Classifier with under resampled data v&agrave;o thực tế.</span></p>
+<p style="line-height: 1.5;"><span style="font-size: 14px;">-&gt; Nh&oacute;m quyết định sử dụng model </span><span style="color: rgb(0, 0, 0); font-family: Times; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">XGBoost Classifier with under resampled data v&agrave;o thực tế.</span></p>
 """
 
 flow_source = """
