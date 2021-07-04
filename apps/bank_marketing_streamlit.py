@@ -103,7 +103,7 @@ def quick_predict_client():
             
             client_df[col] = [col_option]
 
-    if st.button('Predict'):
+    if st.button('Show Prediction'):
             st.write(client_df)
             #client_df = client_df_ok .drop(['y'], axis = 1) 
             client_df = process_input_client(client_df)
@@ -115,7 +115,7 @@ def quick_predict_client():
             st.success(result)
 
 def visualize_predicted_result(df, target):
-    st.text("The Predicted Percentage Of Success");
+    st.subheader("The Predicted Percentage Of Success:");
     data = df.groupby(target).size().sort_values(ascending=False)
     label_dict = {1:'yes',0:'no'}
     fig = plt.figure()
@@ -126,7 +126,7 @@ def predict_data_file(file):
     upload_data = get_df(file)
     features = [col for col in marketing_df.columns.tolist() if col != 'y']
     input_data  = upload_data[features]
-    st.markdown('List of clients to predict:')
+    st.subheader('List Of Customers To Predict:')
     st.write(input_data)
     
     ## prediction
@@ -139,13 +139,14 @@ def predict_data_file(file):
     ## summary result  
     pred_success_cnt = sum((y_client_pred == 1))
     total_cnt = len(y_client_pred)
-    st.markdown('Predicted result:')
-    st.markdown (str(pred_success_cnt) +" clients will say YES over "+str(total_cnt) +' people')
+    st.subheader('Predicted Result:')
+    st.success (str(pred_success_cnt) +" customers say YES over "+str(total_cnt) +' people')
     visualize_predicted_result(upload_data, result_col)
     
     ## view result
-    view_result_option = ['view all',"view successful list", "view unsuccesful list"]
-    view_type_id = st.selectbox('CHOOSE VIEW:',options = view_result_option)
+    view_result_option = ['View All',"View Successful List", "View Unsuccesful List"]
+    st.subheader("Choose View:")
+    view_type_id = st.selectbox('',options = view_result_option)
     if (view_type_id == view_result_option[0]):
         st.write(upload_data) 
     else:
@@ -214,7 +215,7 @@ def main():
             st.write("Upload a .csv or .xlsx file to get started")
         else:
             predict_data_file(file)
-    if st.button("Thanks") :
+    if st.sidebar.button("Thanks") :
         st.text("Thank you for visiting  and happy learning :)")
         st.balloons()      
 main()
