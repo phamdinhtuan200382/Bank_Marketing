@@ -205,7 +205,7 @@ def main():
     """
     st.markdown(htk,unsafe_allow_html=True)
     predict_option = ['Quick Predict','Predict With Data File']
-    predict_type_id = st.sidebar.selectbox('CHOOSE PREDICT:',options = predict_option)
+    predict_type_id = st.sidebar.selectbox('CHOOSE PREDICT',options = predict_option)
     
     if (predict_type_id  == predict_option[0]):
         quick_predict_client()
