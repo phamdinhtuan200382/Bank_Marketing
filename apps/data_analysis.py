@@ -675,7 +675,7 @@ def main():
     with st.form(key='my-form'):
         total_cus = st.number_input('Tổng số khách hàng liên hệ:', value = 0)
         submit = st.form_submit_button(label = 'Calculate')
-        save_cost = 20*int(total_cus)*0.852168 - 10*int(total_cus)
+        save_cost = round((20*int(total_cus)*0.852168 - 10*int(total_cus)),1)
         if submit:
             a = st.write(f'Lợi nhuận thu được là: {save_cost} $')
             st.session_state.a = ""
