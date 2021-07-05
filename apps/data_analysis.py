@@ -637,7 +637,8 @@ def main():
     ### Model result
     st.markdown(h3,unsafe_allow_html=True)        
     result_img = Image.open("image/result_visualization.png")
-    result_comparison = pd.read_csv('data/AC_result.csv',sep=',')
+    result_comparison = pd.read_csv('data/AC_result.csv',sep=',', index_col=0)
+
     
     #Description about result
     st.markdown("""<p><span style="font-size: 14px;">Trong qu&aacute; tr&igrave;nh x&acirc;y dựng m&ocirc; h&igrave;nh dự đo&aacute;n v&agrave; ph&acirc;n t&iacute;ch, nh&oacute;m đ&atilde; thực hiện nhiều bước pre-process kh&aacute;c nhau dựa v&agrave;o phần ph&acirc;n t&iacute;ch data c&ugrave;ng với việc thực nghiệm tr&ecirc;n nhiều m&ocirc; h&igrave;nh kh&aacute;c nhau để dự đo&aacute;n. Tuy nhi&ecirc;n để tr&aacute;nh g&acirc;y bối rối cho người đọc, nh&oacute;m chỉ chọn lọc ra bước pre-processing được sử dụng ch&iacute;nh c&ugrave;ng 5 models cho ra kết quả cao nhất.</span></p>""", unsafe_allow_html=True)
@@ -672,11 +673,13 @@ def main():
     st.markdown(benefit, True)   
 
     with st.form(key='my-form'):
-        total_cus = st.number_input('Tổng số khách hàng liên hệ:')
+        total_cus = st.number_input('Tổng số khách hàng liên hệ:', value = 0)
         submit = st.form_submit_button(label = 'Calculate')
-        save_cost = 20*int(total_cus)*0.933094 - 10*int(total_cus)
+        save_cost = 20*int(total_cus)*0.852168 - 10*int(total_cus)
         if submit:
-            st.write(f'Lợi nhuận thu được là: {save_cost}')
+            a = st.write(f'Lợi nhuận thu được là: {save_cost} $')
+            st.session_state.a = ""
+
 
     def my_widget(key):
         st.subheader('Hello there!')
