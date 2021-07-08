@@ -4,6 +4,8 @@ import numpy as np
 # from pandas_profiling import ProfileReport
 # from streamlit_pandas_profiling import st_profile_report
 
+@st.cache(allow_output_mutation=True, max_entries=10, ttl=3600)
+
 from sklearn.preprocessing import MinMaxScaler
 import json
 import pickle
@@ -285,4 +287,4 @@ def main():
 main()
 
 
-## Run: streamlit run apps/bank_marketing_streamlit.py
+## Run: streamlit run app.py
