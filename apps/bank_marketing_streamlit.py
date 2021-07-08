@@ -23,12 +23,15 @@ from xgboost import XGBClassifier
 import matplotlib.pyplot as plt
 import base64
 st.set_page_config(layout="wide")
+
+@st.cache(allow_output_mutation=True, max_entries=10, ttl=3600)
 def transform_pdays(val):
     transform_dict = {999:'not_previously_contacted',7: 'over_a_week',0:'within_a_week'}
     for key in transform_dict.keys():
         if (val >= key):
             return transform_dict[key]
         
+@st.cache(allow_output_mutation=True, max_entries=10, ttl=3600)
 ### processing input data
 def process_input_client(client_df):
     num_cols = marketing_df.dtypes[marketing_df.dtypes != 'object'].index.tolist()
@@ -64,6 +67,7 @@ def process_input_client(client_df):
         
     return(client_df)  
  
+
 def get_cat_cols_val(data):
     unique_dict= {}
     cat_cols = data.dtypes[data.dtypes == 'object'].index
@@ -72,6 +76,7 @@ def get_cat_cols_val(data):
         unique_dict[col] = unique_col
     return unique_dict
 
+@st.cache(allow_output_mutation=True, max_entries=10, ttl=3600)
 def quick_predict_client(model):
     client_df_ok = pd.read_csv("data/X_client_df.csv", index_col = 'Unnamed: 0')
 
@@ -117,6 +122,7 @@ def quick_predict_client(model):
         else:
             st.warning(result)
 
+@st.cache(allow_output_mutation=True, max_entries=10, ttl=3600)
 def visualize_predicted_result(df, target):
     st.subheader("The Predicted Percentage Of Success:")
     data = df.groupby(target).size().sort_values(ascending=False)
@@ -125,7 +131,8 @@ def visualize_predicted_result(df, target):
     plt.pie(x=data , autopct='%.1f%%',  labels= [label_dict[val] for val in data.index.tolist()], pctdistance=0.7, radius=1.1)
     col1, col2, col3 = st.beta_columns(3)
     col2.pyplot(fig)   
-    
+
+@st.cache(allow_output_mutation=True, max_entries=10, ttl=3600)   
 def predict_data_file(file,model):
     upload_data = get_df(file)
     features = [col for col in marketing_df.columns.tolist() if col != 'y']
@@ -164,7 +171,7 @@ def predict_data_file(file,model):
      
 
      
-        
+ 
 # Initial setup
 # st.set_page_config(layout="wide")
 def get_df(file):
