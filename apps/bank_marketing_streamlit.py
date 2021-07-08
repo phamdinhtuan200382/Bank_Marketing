@@ -4,7 +4,6 @@ import numpy as np
 # from pandas_profiling import ProfileReport
 # from streamlit_pandas_profiling import st_profile_report
 
-@st.cache(allow_output_mutation=True, max_entries=10, ttl=3600)
 
 from sklearn.preprocessing import MinMaxScaler
 import json
