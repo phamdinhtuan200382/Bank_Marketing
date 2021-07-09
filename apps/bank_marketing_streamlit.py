@@ -115,14 +115,13 @@ def quick_predict_client(model):
             st.warning(result)
 
 def visualize_predicted_result(df, target):
-    st.subheader("The Predicted Percentage Of Success:");
+    st.subheader("The Predicted Percentage Of Success:")
     data = df.groupby(target).size().sort_values(ascending=False)
     label_dict = {1:'yes',0:'no'}
-    
     fig = plt.figure(figsize = (3,3))
-    plt.pie(x=data , autopct="%.1f%%",  labels= [label_dict[val] for val in data.index.tolist()], pctdistance=0.7, radius=1.1)
+    plt.pie(x=data , autopct='%.1f%%',  labels= [label_dict[val] for val in data.index.tolist()], pctdistance=0.7, radius=1.1)
     col1, col2, col3 = st.beta_columns(3)
-    col2.pyplot(fig)  
+    col2.pyplot(fig)   
     
   
 def predict_data_file(file,model):
@@ -173,12 +172,7 @@ def get_df(file):
     elif extension.upper() == 'PICKLE':
         df = pd.read_pickle(file)
     return df
-
-def view_models_summary(df):
-    ## Evaluation metrics
-    st.markdown('Evaluation metrics')
-    st.write(df)
-
+ 
 def visulize_feature_importances(model_importances,model_name):
     st.markdown("""---""")
     st.subheader("Features' weight in models")
@@ -190,8 +184,7 @@ def visulize_feature_importances(model_importances,model_name):
     col1,col2 = st.beta_columns(2)
     col1.pyplot(fig) 
     col2.dataframe(data=model_importances.iloc[t])
-    # st.pyplot(fig) 
-    
+        
 def visualize_decision_tree(model, features):
     st.markdown("""---""")
     st.subheader('Decision Tree on Banking Tele-marketing dataset')
@@ -213,7 +206,7 @@ log_clf_file_path = "model/pkl_log_model.pkl"
 tree_clf_file_path = "model/pkl_decisionT_model.pkl"
 grboost_clf_file_path = "model/pkl_grboost_model.pkl"
 
-metric_file_path = "model/evaluation_metrics.csv"
+# metric_file_path = "model/evaluation_metrics.csv"
 
 labelencoder_file_path = "model/pkl_labelencoder.pkl"
 labelencoder = pickle.load(open(labelencoder_file_path, 'rb'))
@@ -227,7 +220,7 @@ def main():
     tree_clf = pickle.load(open(tree_clf_file_path, 'rb'))
     grboost_clf = pickle.load(open(grboost_clf_file_path, 'rb'))
     
-    model_dict = {"XGBoost Classifier" : xgboost_clf
+    model_dict = {"Optimal Model - XGBoost Classifier " : xgboost_clf
                   ,"GradientBoost Classifier": grboost_clf
                   ,'Decision Tree Classifier': tree_clf
                   ,'Logistic Regressor' : log_clf}
@@ -241,59 +234,30 @@ def main():
     </div>
     """
     st.markdown(htk,unsafe_allow_html=True)
-    
-    ## Summary models
-    st.sidebar.subheader('Predict and Summarize')
-    menu_option = ['Make a prediction',"View model summary"]
+
+    model_option =  [val for val in model_dict.keys()]
                     
-    menu_type_id = st.sidebar.selectbox('Your choice:',options = menu_option)
+    model_type_id = st.sidebar.selectbox('Choose model to predict:',options = model_option)
     
-    ## View summary
-    if(menu_type_id == menu_option[1]):
-        metric_df = pd.read_csv(metric_file_path)
-        ## Evalutation metrics
-        view_models_summary(metric_df)
-        
-        ## Visualize feature importance
-        importance_option = [val for val in model_dict.keys()]
-        importance_type_id = st.sidebar.radio('View feature importances of',options = importance_option)
-      
-        model = model_dict[importance_type_id]
-        features = [i for i in process_value_df.feature.tolist()]
-        
-        model_importances = pd.DataFrame({'Feature': features})
-        if model == log_clf:
-            model_importances['Weight']= model.coef_[0]
+    model = model_dict[model_type_id]
+    predict_option = ['Quick Predict','Predict With Data File']
+    predict_type_id = st.sidebar.radio('Choose predict',options = predict_option)
+    
+    ## Quick predict
+    if (predict_type_id  == predict_option[0]):
+        quick_predict_client(model)
+        ## Predict on file
+    elif (predict_type_id  == predict_option[1]):
+        file = st.file_uploader("Upload file", type=['csv'])
+        if not file:
+            st.write("Upload a .csv or .xlsx file to get started")
         else:
-            model_importances['Weight']= model.feature_importances_      
-        visulize_feature_importances(model_importances,importance_type_id)  
-        
-        if(importance_type_id == 'Decision Tree Classifier'):
-            visualize_decision_tree(model, features) 
-            
-        
-    else:
-    ## Make prediction
-        if (menu_type_id == menu_option[0]):
-            model = xgboost_clf
-            predict_option = ['Quick Predict','Predict With Data File']
-            predict_type_id = st.sidebar.radio('Choose predict',options = predict_option)
-            
-            ## Quick predict
-            if (predict_type_id  == predict_option[0]):
-                quick_predict_client(model)
-                ## Predict on file
-            elif (predict_type_id  == predict_option[1]):
-                file = st.file_uploader("Upload file", type=['csv'])
-                if not file:
-                    st.write("Upload a .csv or .xlsx file to get started")
-                else:
-                    predict_data_file(file,model)
-         
-   
+            predict_data_file(file,model) 
+
     if st.sidebar.button("Thanks") :
         st.text("Thank you for visiting  and happy learning :)")
         st.balloons()      
+
 main()
 
 # streamlit run apps/bank_marketing_streamlit.py
