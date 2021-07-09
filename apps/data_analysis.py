@@ -486,6 +486,21 @@ log_clf_file_path = "model/pkl_log_model.pkl"
 tree_clf_file_path = "model/pkl_decisionT_model.pkl"
 grboost_clf_file_path = "model/pkl_grboost_model.pkl"
 
+def visulize_feature_importances(model_importances,model_name):
+    
+    t = model_importances['Weight'].sort_values(ascending = False).index.tolist()
+    fig = plt.figure(figsize = (12,9))
+    sns.barplot( x = model_importances.iloc[t]['Weight'], y = model_importances.iloc[t]['Feature'])
+    plt.title('The feature importance of '+ model_name)
+    plt.show()
+    col1,col2= st.beta_columns((6,2))
+    col1.pyplot(fig) 
+    # col2.dataframe(data=model_importances.iloc[t])
+    col2.markdown("""
+    <p style="text-align: center;"><span style="font-family: Arial, Helvetica, sans-serif;">Feature Weight</span></p>
+    """, unsafe_allow_html=True)
+    col2.dataframe(model_importances.iloc[t], width = 2400, height = 3200)
+
 
 def page_01():
     
@@ -730,44 +745,7 @@ def page_01():
             a = st.write(f'Lợi nhuận thu được là: {save_cost} $')
             st.session_state.a = ""
 
-def visulize_feature_importances(model_importances,model_name):
-    
-    t = model_importances['Weight'].sort_values(ascending = False).index.tolist()
-    fig = plt.figure(figsize = (12,9))
-    sns.barplot( x = model_importances.iloc[t]['Weight'], y = model_importances.iloc[t]['Feature'])
-    plt.title('The feature importance of '+ model_name)
-    plt.show()
-    col1,col2= st.beta_columns((6,2))
-    col1.pyplot(fig) 
-    # col2.dataframe(data=model_importances.iloc[t])
-    col2.markdown("""
-    <p style="text-align: center;"><span style="font-family: Arial, Helvetica, sans-serif;">Feature Weight</span></p>
-    """, unsafe_allow_html=True)
-    col2.dataframe(model_importances.iloc[t], width = 2400, height = 3200)
-
-def view_models_summary(df):
-    ## Evaluation metrics
-    st.markdown('Evaluation metrics')
-    st.write(df)
-
-def page_02():
-        # 1. Pre-processing
-        st.subheader("1. Tiền xử lí dữ liệu")
-        col1, col2  = st.beta_columns(2)
-        col1.markdown(pre_process_1, True)
-        col2.markdown(pre_process_2, True)
-
-        # 2. Detail Model result
-        st.subheader("2. Kết quả chi tiết trên các model thực nghiệm")
-        metric_df = pd.read_csv(metric_file_path, index_col= 0)
-        st.dataframe(metric_df.style.highlight_max(axis=0))
-        st.markdown(result_analysis_01, True)
-        xgboost_clf = pickle.load(open(xgboost_clf_file_path, 'rb'))
-        log_clf = pickle.load(open(log_clf_file_path, 'rb'))
-        tree_clf = pickle.load(open(tree_clf_file_path, 'rb'))
-        grboost_clf = pickle.load(open(grboost_clf_file_path, 'rb'))
-
-        ## Summary models
+    ## Summary models
 
         model_dict = {"XGBoost Classifier" : xgboost_clf
                         ,"GradientBoost Classifier": grboost_clf
@@ -793,6 +771,30 @@ def page_02():
                 ### Add decision tree imag
                 decisiontree_img = Image.open("image/decision_tree.png")
                 st.image(decisiontree_img, use_column_width=True)
+
+
+def view_models_summary(df):
+    ## Evaluation metrics
+    st.markdown('Evaluation metrics')
+    st.write(df)
+
+def page_02():
+        # 1. Pre-processing
+        st.subheader("1. Tiền xử lí dữ liệu")
+        col1, col2  = st.beta_columns(2)
+        col1.markdown(pre_process_1, True)
+        col2.markdown(pre_process_2, True)
+
+        # 2. Detail Model result
+        st.subheader("2. Kết quả chi tiết trên các model thực nghiệm")
+        metric_df = pd.read_csv(metric_file_path, index_col= 0)
+        st.dataframe(metric_df.style.highlight_max(axis=0))
+        st.markdown(result_analysis_01, True)
+        xgboost_clf = pickle.load(open(xgboost_clf_file_path, 'rb'))
+        log_clf = pickle.load(open(log_clf_file_path, 'rb'))
+        tree_clf = pickle.load(open(tree_clf_file_path, 'rb'))
+        grboost_clf = pickle.load(open(grboost_clf_file_path, 'rb'))
+
                 
 def main():
 
