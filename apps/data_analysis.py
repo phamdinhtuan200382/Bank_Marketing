@@ -789,7 +789,7 @@ def page_02():
                 model_importances['Weight']= model.feature_importances_
             visulize_feature_importances(model_importances,importance_type_id)
             if importance_type_id == "Decision Tree Classifier":
-                ### Add decision tree image
+                ### Add decision tree imag
                 decisiontree_img = Image.open("image/decision_tree.png")
                 st.image(decisiontree_img, use_column_width=True)
 
