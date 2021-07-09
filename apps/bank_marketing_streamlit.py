@@ -230,7 +230,7 @@ def main():
     
     htk=  """
     <div style="background-color:#004d99;padding:0px">
-    <h2 style="color:white;text-align:center;">CUSTOMER DESPOIT PREDICTION APP </h2>
+    <h2 style="color:white;text-align:center;">CUSTOMER DEPOSIT PREDICTION APP </h2>
     </div>
     """
     st.markdown(htk,unsafe_allow_html=True)
