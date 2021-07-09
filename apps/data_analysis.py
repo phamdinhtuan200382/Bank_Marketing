@@ -390,6 +390,7 @@ result_analysis_01 = """
 """
 
 result_analysis_02 = """
+<p style="line-height: 1.5;"><span style="font-size: 14px; font-family: Calibri, sans-serif;">Trong qu&aacute; tr&igrave;nh thực nghiệm, nh&oacute;m đ&atilde; thực hiện training tr&ecirc;n nhiều loại model kh&aacute;c nhau. Biểu đồ đầu ti&ecirc;n thể hiện mức độ t&iacute;n nhiệm của 4 model m&agrave; nh&oacute;m đ&aacute;nh gi&aacute; cho ra kết quả AC tốt nhất. Trong c&aacute;c model đ&atilde; đ&aacute;nh gi&aacute;, nh&oacute;m quyết định chọn model XGBoost Classifier để đưa v&agrave;o ứng dụng thực tế với kết quả cao nhất tr&ecirc;n Recall l&agrave; 0.934489 v&agrave; tr&ecirc;n Accuracy l&agrave; 0.891246.</span></p>
 
 """
 
@@ -411,19 +412,19 @@ decision_tree_note = """
 """
 
 variable_df1 = """
-<ul style="list-style-type: square;">
-    <li style="line-height: 1.5;"><span style="font-size: 14px; font-family: Calibri, sans-serif;">Age: Độ tuổi của kh&aacute;ch h&agrave;ng thời điểm được li&ecirc;n hệ</span></li>
-    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Job: C&ocirc;ng việc của kh&aacute;ch h&agrave;ng</span></span></li>
-    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Marital: T&igrave;nh trạng h&ocirc;n nh&acirc;n&nbsp;</span></span></li>
-    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Education: Tr&igrave;nh độ học vấn cao nhất hiện c&oacute;</span></span></li>
-    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Default: T&igrave;nh trạng nợ xấu</span></span></li>
-    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Housing: T&igrave;nh trạng nh&agrave; ở hiện tại</span></span></li>
-    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Loan: T&igrave;nh trạng nợ</span></span></li>
-    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Contact: C&aacute;ch thức li&ecirc;n hệ của ng&acirc;n h&agrave;ng</span></span></li>
-    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Month: Lần li&ecirc;n hệ cuối c&ugrave;ng trong năm đối với kh&aacute;ch h&agrave;ng n&agrave;y</span></span></li>
-    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Day_of_week: Lần li&ecirc;n hệ cuối c&ugrave;ng trong tuần</span></span></li>
-    <li style="line-height: 1.5;"><span style="font-size: 14px; font-family: Calibri, sans-serif;">Duration: Tổng thời gian gọi điện trong lần li&ecirc;n hệ cuối c&ugrave;ng với kh&aacute;ch h&agrave;ng</span></li>
-    <li style="line-height: 1.5;"><span style="font-size: 14px; font-family: Calibri, sans-serif;">Compaign: Số lần li&ecirc;n hệ đối với kh&aacute;ch h&agrave;ng n&agrave;y v&agrave; trong chiến dịch hiện tại</span></li>
+<ul style='font-size: 16px; box-sizing: border-box; margin: 0px; padding: 0px; caret-color: rgb(38, 39, 48); color: rgb(38, 39, 48); font-family: "IBM Plex Sans", sans-serif; list-style-type: square;'>
+    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="box-sizing: border-box; font-size: 14px; font-family: Calibri, sans-serif;">Age: Độ tuổi của kh&aacute;ch h&agrave;ng thời điểm được li&ecirc;n hệ</span></li>
+    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="box-sizing: border-box; font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 14px;">Job: C&ocirc;ng việc của kh&aacute;ch h&agrave;ng</span></span></li>
+    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="box-sizing: border-box; font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 14px;">Marital: T&igrave;nh trạng h&ocirc;n nh&acirc;n&nbsp;</span></span></li>
+    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="box-sizing: border-box; font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 14px;">Education: Tr&igrave;nh độ học vấn cao nhất hiện c&oacute;</span></span></li>
+    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="box-sizing: border-box; font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 14px;">Default: T&igrave;nh trạng nợ xấu</span></span></li>
+    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="box-sizing: border-box; font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 14px;">Housing: T&igrave;nh trạng nh&agrave; ở hiện tại</span></span></li>
+    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="box-sizing: border-box; font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 14px;">Loan: T&igrave;nh trạng nợ</span></span></li>
+    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="box-sizing: border-box; font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 14px;">Contact: C&aacute;ch thức li&ecirc;n hệ của ng&acirc;n h&agrave;ng</span></span></li>
+    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="box-sizing: border-box; font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 14px;">Month: Th&aacute;ng m&agrave; chiến dịch li&ecirc;n hệ kh&aacute;ch h&agrave;ng n&agrave;y lần cuối</span></span></li>
+    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="box-sizing: border-box; font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 14px;">Day_of_week: Ng&agrave;y m&agrave; chiến dịch li&ecirc;n hệ kh&aacute;ch h&agrave;ng n&agrave;y lần cuối</span></span></li>
+    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="box-sizing: border-box; font-size: 14px; font-family: Calibri, sans-serif;">Duration: Tổng thời gian gọi điện trong lần li&ecirc;n hệ cuối c&ugrave;ng với kh&aacute;ch h&agrave;ng</span></li>
+    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="box-sizing: border-box; font-size: 14px; font-family: Calibri, sans-serif;">Compaign: Số lần li&ecirc;n hệ đối với kh&aacute;ch h&agrave;ng n&agrave;y v&agrave; trong chiến dịch hiện tại</span></li>
 </ul>
 """
 
@@ -597,7 +598,7 @@ def page_01():
         an1, an2 = st.beta_columns(2)
         info_selectbox = an1.selectbox(
         "Nội dung phân tích",
-        ("Các biến khách hàng", "Các biến phương pháp tiếp cận", "Các biến xã hội"))
+        ("Các biến khách hàng", "Các biến về chiến dịch", "Các biến xã hội"))
         if info_selectbox == "Các biến khách hàng":
             # varible_selectbox = an2.selectbox("Tên biến", ('age','job','marital','education','default', 'housing', 'loan'))
             visualize_numerical(marketing_df,'age',target = 'y')
@@ -792,8 +793,7 @@ def page_02():
                 ### Add decision tree imag
                 decisiontree_img = Image.open("image/decision_tree.png")
                 st.image(decisiontree_img, use_column_width=True)
-
-    
+                
 def main():
 
     predict_option = ['Project Overview','Reference']
@@ -810,6 +810,5 @@ def main():
 
 if __name__=='__main__':
     Res=main()
-    
    
 # streamlit run apps/data_analysis.py
