@@ -245,11 +245,6 @@ pdays = """<p style="margin: 0in; font-family: Calibri, sans-serif; line-height:
 <p style="margin: 0in; font-family: Calibri, sans-serif; line-height: 1.5;"><span style="font-size: 14px;">** Note: Data thể hiện tr&ecirc;n biểu đồ c&oacute; pre-process loại bỏ c&aacute;c loại bỏ c&aacute;c gi&aacute; trị &apos;999&apos; của pdays </span></p>
 """
 
-month = """
-<p style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif; font-size: 14px;">Nhận x&eacute;t:&nbsp;</span></p>
-<p style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif; font-size: 14px;">Trong chiến dịch n&agrave;y danh s&aacute;ch li&ecirc;n lạc chủ yếu rơi v&agrave;o m&ugrave;a h&egrave;, đặc biệt l&agrave; th&aacute;ng 5 nhưng tỉ lệ th&agrave;nh c&ocirc;ng cao nhất l&agrave; v&agrave;o th&aacute;ng 3 (c&oacute; thể l&agrave; sau kỳ nghỉ Tết), tiếp đ&oacute; l&agrave; th&aacute;ng 4, th&aacute;ng 9, th&aacute;ng 10 v&agrave; th&aacute;ng 12.</span></p>
-"""
-
 previous = """
 <p style="line-height: 1.5;"><span style="font-size: 14px;">Nhận x&eacute;t:</span></p>
 <ul style="list-style-type: square;">
@@ -281,7 +276,6 @@ cons_price_idx = """
 <li style="line-height: 1.5;"><span style="font-size: 14px;">Hệ số gi&aacute; ti&ecirc;u d&ugrave;ng của kh&aacute;ch h&agrave;ng được gọi nằm trong khoảng 93-94. Tỉ lệ trung b&igrave;nh của chỉ số n&agrave;y ở những người đồng &yacute; gởi thấp hơn những người ko gởi. Điều n&agrave;y c&oacute; nghĩa l&agrave; khi chỉ số gi&aacute; ti&ecirc;u d&ugrave;ng cao (gi&aacute; trị h&agrave;ng h&oacute;a b&aacute;n ra cao), kh&aacute;ch h&agrave;ng sẽ &iacute;t c&oacute; xu hướng gởi tiền.</li>
 </ul>
 """
-
 
 cons_conf_idx = """
 <p style="line-height: 1.5;"><span style="font-size: 14px;">Nhận x&eacute;t:</p>
@@ -396,17 +390,14 @@ result_analysis_01 = """
 """
 
 result_analysis_02 = """
-<p style="line-height: 1.5;"><span style="font-size: 14px; font-family: Calibri, sans-serif;">Trong qu&aacute; tr&igrave;nh thực nghiệm, nh&oacute;m đ&atilde; thực hiện training tr&ecirc;n nhiều loại model kh&aacute;c nhau. Biểu đồ đầu ti&ecirc;n thể hiện mức độ t&iacute;n nhiệm của 4 model m&agrave; nh&oacute;m đ&aacute;nh gi&aacute; cho ra kết quả AC tốt nhất. Trong c&aacute;c model đ&atilde; đ&aacute;nh gi&aacute;, nh&oacute;m quyết định chọn model XGBoost Classifier để đưa v&agrave;o ứng dụng thực tế với kết quả cao nhất tr&ecirc;n Recall l&agrave; 0.934489 v&agrave; tr&ecirc;n Accuracy l&agrave; 0.891246.</span></p>
+
 """
 
 flow_source = """
 <p><span style='color: rgb(44, 130, 201); font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;'><em>inspired by&nbsp;</em></span><span style="color: rgb(44, 130, 201);"><a class="el gz" href="https://the-modeling-agency.com/crisp-dm.pdf" rel="noopener nofollow" style='box-sizing: inherit; color: inherit; text-decoration: underline; -webkit-tap-highlight-color: transparent; font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);'><span style="font-size: 12px;"><em>CRISP-DM 1.0</em></span></a></span></p>
 """
-benefit01 = """
-<p style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif; font-size: 14px;">Trong qu&aacute; tr&igrave;nh t&iacute;nh to&aacute;n lợi nhuận m&agrave; model c&oacute; thể mang lại trong ứng dụng thực tế, nh&oacute;m nhận thấy model cho ra lợi nhuận cao nhất ở threadhold 0.5 (theo biểu đồ về mối quan hệ giữa threadhold v&agrave; profit).</span></p>
-"""
 
-benefit02 = """
+benefit = """
 <p style="line-height: 1.5;"><span style="font-size: 14px;">Về ứng dụng trong thực tế đối với model chọn lọc, nh&oacute;m giả sử:</span></p>
 <ul style="list-style-type: square;">
     <li style="line-height: 1.5;"><span style="font-size: 14px;">Kh&aacute;ch h&agrave;ng lắng nghe 100% kết quả của model</span></li>
@@ -658,7 +649,7 @@ def page_01():
             #visualize
             visualize_categorical_w_success(marketing_01 , 'month_num', target = 'y')
             st.pyplot()
-            st.markdown(month, True)
+            #### st.markdown(month, True)
 
             visualize_numerical(marketing_df,'duration')
             st.pyplot()
@@ -697,7 +688,6 @@ def page_01():
                 st.set_option('deprecation.showPyplotGlobalUse', False)
                 # Explain Text
                 st.markdown(client_varible[i], True)
-        st.set_option('deprecation.showPyplotGlobalUse', False)
 
     # if info_selectbox == "Lưu ý chung":
     #     col1, col2  = st.beta_columns(2)
@@ -721,22 +711,20 @@ def page_01():
     # 3. result
     st.subheader("2. Kết quả")
     result_img = Image.open("image/result_visualization.png")
+
+    col1, col2  = st.beta_columns(2)
     st.image(result_img, use_column_width=True)
     st.markdown(result_analysis_02, True)
 
+
     # 4 Benefit calculation
     st.subheader("3. Lợi nhuận dự kiến khi sử dụng mô hình vào thực tế")
-    st.markdown(benefit01, True)
-    profit_img = Image.open("image/profit.png")
-    
-    col1, col2  = st.beta_columns((6,3))
-    col1.image(profit_img, use_column_width=True)
-    st.markdown(benefit02, True)   
+    st.markdown(benefit, True)   
 
     with st.form(key='my-form'):
         total_cus = st.number_input('Tổng số khách hàng liên hệ:', value = 0)
         submit = st.form_submit_button(label = 'Calculate')
-        save_cost = round((20*int(total_cus)*0.859924 - 10*int(total_cus)),1)
+        save_cost = round((20*int(total_cus)*0.852168 - 10*int(total_cus)),1)
         if submit:
             a = st.write(f'Lợi nhuận thu được là: {save_cost} $')
             st.session_state.a = ""
