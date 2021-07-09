@@ -194,7 +194,7 @@ default = """
 <p style="box-sizing: border-box; margin: 0in; padding: 0px; font-size: 16px; font-weight: normal; caret-color: rgb(38, 39, 48); color: rgb(38, 39, 48); font-style: normal; font-variant-caps: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; font-family: Calibri, sans-serif; line-height: 1.5;"><span style="box-sizing: border-box; font-size: 14px;">Nhận x&eacute;t:</span></p>
 <ul style='box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; font-size: 16px; font-weight: normal; caret-color: rgb(38, 39, 48); color: rgb(38, 39, 48); font-family: "IBM Plex Sans", sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; list-style-type: square;'>
     <li style="box-sizing: border-box; margin: 0in 0in 0in 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; font-family: Calibri, sans-serif; line-height: 1.5;"><span style="box-sizing: border-box; font-size: 14px;">Trong chiến dịch n&agrave;y, ng&acirc;n h&agrave;ng chỉ tập trung v&agrave;o đối tượng kh&ocirc;ng c&oacute; nợ xấu n&ecirc;n nh&igrave;n chung việc đ&aacute;nh gi&aacute; sự ảnh hưởng của yếu tố n&agrave;y l&ecirc;n &yacute; định quyết định gửi tiền của kh&aacute;ch h&agrave;ng rất kh&oacute;. Tuy nhi&ecirc;n c&oacute; thể đặt ra giả thiết dễ hiểu l&agrave; những người c&oacute; nợ th&igrave; sẽ kh&ocirc;ng c&oacute; tiền để gửi tiết kiệm n&ecirc;n việc ng&acirc;n h&agrave;ng loại những kh&aacute;ch h&agrave;ng c&oacute; nợ xấu ra khỏi đối tượng mục ti&ecirc;u l&agrave; hợp l&iacute;.</span></li>
-    <li style="box-sizing: border-box; margin: 0in 0in 0in 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; font-family: Calibri, sans-serif; line-height: 1.5;"><span style="box-sizing: border-box; font-size: 14px;">Yếu tố default l&agrave; yếu tố c&oacute; độ inbalance lớn đồng thời c&oacute; số lượng missing gần 10.000, điều n&agrave;y cũng chứng tỏ việc thu thập dữ liệu n&agrave;y tương đối kh&oacute; khăn.</span></li>
+    <li style="box-sizing: border-box; margin: 0in 0in 0in 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; font-family: Calibri, sans-serif; line-height: 1.5;"><span style="box-sizing: border-box; font-size: 14px;">Yếu tố default l&agrave; yếu tố c&oacute; độ imbalance lớn đồng thời c&oacute; số lượng missing gần 10.000, điều n&agrave;y cũng chứng tỏ việc thu thập dữ liệu n&agrave;y tương đối kh&oacute; khăn.</span></li>
 </ul>
 """
 housing = """
@@ -208,7 +208,7 @@ housing = """
 loan = """
 <p style="box-sizing: border-box; margin: 0in; padding: 0px; font-size: 16px; font-weight: normal; caret-color: rgb(38, 39, 48); color: rgb(38, 39, 48); font-style: normal; font-variant-caps: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; font-family: Calibri, sans-serif; line-height: 1.5;"><span style="box-sizing: border-box; font-size: 14px;">Nhận x&eacute;t:</span></p>
 <ul style='box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; font-size: 16px; font-weight: normal; caret-color: rgb(38, 39, 48); color: rgb(38, 39, 48); font-family: "IBM Plex Sans", sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; list-style-type: square;'>
-    <li style="box-sizing: border-box; margin: 0in 0in 0in 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; font-family: Calibri, sans-serif; line-height: 1.5;"><span style="box-sizing: border-box; font-size: 14px;">Trong chiến dịch n&agrave;y, ng&acirc;n h&agrave;ng tập trung chủ yếu v&agrave;o những đối tượng kh&ocirc;ng c&oacute; nợ -&gt; biến c&oacute; độ inbalance cao n&ecirc;n cần c&acirc;n nhắc th&ecirc;m về mối li&ecirc;n hệ với c&aacute;c biến kh&aacute;c.</span></li>
+    <li style="box-sizing: border-box; margin: 0in 0in 0in 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; font-family: Calibri, sans-serif; line-height: 1.5;"><span style="box-sizing: border-box; font-size: 14px;">Trong chiến dịch n&agrave;y, ng&acirc;n h&agrave;ng tập trung chủ yếu v&agrave;o những đối tượng kh&ocirc;ng c&oacute; nợ -&gt; biến c&oacute; độ imbalance cao n&ecirc;n cần c&acirc;n nhắc th&ecirc;m về mối li&ecirc;n hệ với c&aacute;c biến kh&aacute;c.</span></li>
     <li style="box-sizing: border-box; margin: 0in 0in 0in 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; font-family: Calibri, sans-serif; line-height: 1.5;"><span style="box-sizing: border-box; font-size: 14px;">X&eacute;t về tỉ lệ kh&aacute;ch h&agrave;ng đồng &yacute; gửi tiền tiết kiệm th&igrave; kh&ocirc;ng c&oacute; sự ch&ecirc;ch lệnh nhiều giữa những kh&aacute;ch h&agrave;ng c&oacute; nợ, kh&ocirc;ng c&oacute; nợ v&agrave; kể cả một lượng missing value nhỏ. Điều n&agrave;y chứng tỏ việc kh&aacute;ch h&agrave;ng c&oacute; nợ hay kh&ocirc;ng c&oacute; nợ kh&ocirc;ng thực sự ảnh hưởng nhiều đến quyết định gửi tiền tiết kiệm, ng&acirc;n h&agrave;ng c&oacute; thể c&acirc;n nhắc loại bỏ yếu tố n&agrave;y trong qu&aacute; tr&igrave;nh t&igrave;m kiếm kh&aacute;ch h&agrave;ng trong chiến dịch tiếp theo.<br></span></li>
     <li style="box-sizing: border-box; margin: 0in 0in 0in 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; font-family: Calibri, sans-serif; line-height: 1.5;"><span style="box-sizing: border-box; font-size: 14px;">Biến nợ c&oacute; một số lượng missing value tuy nhi&ecirc;n kh&ocirc;ng đ&aacute;ng kể.</span></li>
 </ul>
@@ -237,7 +237,7 @@ duration = """
 <p style="line-height: 1.5;"><span style="font-size: 14px;">Nhận x&eacute;t:</span></p>
 <ul style="list-style-type: square;">
     <li style="line-height: 1.5;"><span style="font-size: 14px;">Thời gian gọi điện trung b&igrave;nh cho kh&aacute;ch h&agrave;ng nằm ở 449s</span></li>
-    <li style="line-height: 1.5;"><span style="font-size: 14px;">Thời gian của cuộc gọi gần nhất (duration) tập trung trong khoảng 0-200.&nbsp;</span></li>
+    <li style="line-height: 1.5;"><span style="font-size: 14px;">Thời gian của cuộc gọi gần nhất (duration) tập trung trong khoảng 100-400.&nbsp;</span></li>
     <li style="line-height: 1.5;"><span style="font-size: 14px;">Những người c&oacute; duration = 0 th&igrave; tỉ lệ th&agrave;nh c&ocirc;ng gần như l&agrave; 0. Ở những trường hợp tiếp cận th&agrave;nh c&ocirc;ng, thời lượng trung b&igrave;nh của cuộc gọi gần nhất trong chiến dịch hiện tại khoảng 450 (tập trung trong khoảng &lt; 1000)</span></li>
 </ul>
 """
@@ -385,9 +385,10 @@ metric = """
 """
 
 overview_1 = """
-<p style="line-height: 1.5;"><span style="font-size: 14px;">Mục đ&iacute;ch dự &aacute;n: Nghi&ecirc;n cứu về chiến dịch tiếp thị khuyến kh&iacute;ch kh&aacute;ch h&agrave;ng gửi tiền tiết kiệm th&ocirc;ng qua điện thoại của ng&acirc;n h&agrave;ng, từ đ&oacute; x&acirc;y dựng m&ocirc; h&igrave;nh dự đo&aacute;n về mức độ th&agrave;nh c&ocirc;ng của chiến dịch đối với nh&oacute;m kh&aacute;ch h&agrave;ng mục ti&ecirc;u v&agrave; đ&aacute;nh gi&aacute; hiệu quả kinh tế nếu &aacute;p dụng m&ocirc; h&igrave;nh đ&aacute;nh gi&aacute; v&agrave;o thực tế.</span></p>
-<p style="line-height: 1.5;"><span style="font-size: 14px;">Tập Dataset: Bộ dữ liệu được d&ugrave;ng l&agrave; dữ liệu của chiến dịch tele-marketing ở Thổ Nhĩ Kỳ (từ 05/2008 đến 11/2010) tr&ecirc;n 41188 mẫu với 20 thuộc t&iacute;nh kh&aacute;c nhau.</span></p>
-<p style="line-height: 1.5;"><span style="font-size: 14px;">Phương ph&aacute;p nhi&ecirc;n cứu: Đối với b&agrave;i to&aacute;n n&agrave;y, nh&oacute;m đ&atilde; thực hiện đầy đủ 7 bước/ 8 bước th&ocirc;ng thường của một dự &aacute;n data science thực tế trong doanh nghiệp như b&ecirc;n dưới:</span></p>
+<p style="line-height: 1.5;"><span style="box-sizing: border-box; font-size: 14px;"><strong><span style="font-family: Calibri, sans-serif;">Mục đ&iacute;ch dự &aacute;n:</span></strong><span style="font-family: Calibri, sans-serif;">&nbsp;Nghi&ecirc;n cứu về chiến dịch tiếp thị khuyến kh&iacute;ch kh&aacute;ch h&agrave;ng gửi tiền tiết kiệm th&ocirc;ng qua điện thoại của ng&acirc;n h&agrave;ng, từ đ&oacute; x&acirc;y dựng m&ocirc; h&igrave;nh dự đo&aacute;n về mức độ th&agrave;nh c&ocirc;ng của chiến dịch đối với nh&oacute;m kh&aacute;ch h&agrave;ng mục ti&ecirc;u v&agrave; đ&aacute;nh gi&aacute; hiệu quả kinh tế nếu &aacute;p dụng m&ocirc; h&igrave;nh đ&aacute;nh gi&aacute; v&agrave;o thực tế.</span></span></p>
+<p style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 14px;"><strong>Tập Dataset:</strong> Bộ dữ liệu được d&ugrave;ng l&agrave; dữ liệu của chiến dịch tele-marketing ở Thổ Nhĩ Kỳ (từ 05/2008 đến 11/2010) tr&ecirc;n 41188 mẫu với 20 thuộc t&iacute;nh kh&aacute;c nhau.</span></span></p>
+<p style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 14px;"><strong>Phương ph&aacute;p nghi&ecirc;n cứu:</strong> Đối với b&agrave;i to&aacute;n n&agrave;y, nh&oacute;m đ&atilde; thực hiện đầy đủ 7 bước/ 8 bước th&ocirc;ng thường của một dự &aacute;n data science thực tế trong doanh nghiệp như b&ecirc;n dưới:</span><br><br><br><br></span></p>
+<p style="line-height: 1.5;"><br></p>
 """
 overview_2 = """
 <p style="line-height: 1.5;"><span style="font-size: 14px;">Tuy nhi&ecirc;n, v&igrave; thời gian ban tổ chức đưa ra cho dự &aacute;n c&oacute; hạn cũng như v&igrave; l&agrave; lần đầu ti&ecirc;n trải nghiệm với dự &aacute;n Data science thực tế, nh&oacute;m kh&ocirc;ng tr&aacute;nh khỏi nhiều sai s&oacute;t trong qu&aacute; tr&igrave;nh l&agrave;m. Nh&oacute;m rất mong nhận được sự th&ocirc;ng cảm, g&oacute;p &yacute; từ qu&yacute; doanh nghiệp, ban tổ chức cũng như c&aacute;c bạn tham gia chương tr&igrave;nh để nh&oacute;m c&oacute; thể học tập, sửa chữa v&agrave; ho&agrave;n thiện b&agrave;i hơn.</span></p>
@@ -403,8 +404,8 @@ result_analysis_01 = """
 """
 
 result_analysis_02 = """
-<p style="line-height: 1.5;"><span style="font-size: 14px; font-family: Calibri, sans-serif;">Trong qu&aacute; tr&igrave;nh thực nghiệm, nh&oacute;m đ&atilde; thực hiện training tr&ecirc;n nhiều loại model kh&aacute;c nhau. Biểu đồ đầu ti&ecirc;n thể hiện mức độ t&iacute;n nhiệm của 4 model m&agrave; nh&oacute;m đ&aacute;nh gi&aacute; cho ra kết quả AC tốt nhất. Trong c&aacute;c model đ&atilde; đ&aacute;nh gi&aacute;, nh&oacute;m quyết định chọn model XGBoost Classifier để đưa v&agrave;o ứng dụng thực tế với kết quả cao nhất tr&ecirc;n Recall l&agrave; 0.939611 v&agrave; tr&ecirc;n Accuracy l&agrave; 0.888015.</span></p>
-
+<p style="margin: 0in; font-family: Calibri, sans-serif; line-height: 1.5;"><span style="font-size: 14px;">M&ocirc; h&igrave;nh ti&ecirc;n đo&aacute;n tối ưu nhất: <strong>XGBoost Classifier with under resampled data</strong> &amp; <strong>Decision Tree</strong>.&nbsp;</span></p>
+<p style="margin: 0in; font-family: Calibri, sans-serif; line-height: 1.5;"><span style="font-size: 14px;">Top 5 thuộc t&iacute;nh ảnh hưởng nhiều nhất đến hiệu quả của chiến dịch: số lượng người c&oacute; việc l&agrave;m (nr.employed), thời lượng cuộc gọi (duration, tỉ lệ thay đổi c&ocirc;ng việc (emp.var.rate) v&agrave; l&atilde;i suất 3 th&aacute;ng của euribor (euribor3m). </span></p>
 """
 
 flow_source = """
@@ -412,12 +413,14 @@ flow_source = """
 """
 
 benefit = """
-<p style="line-height: 1.5;"><span style="font-size: 14px;">Về ứng dụng trong thực tế đối với model chọn lọc, nh&oacute;m giả sử:</span></p>
-<ul style="list-style-type: square;">
-    <li style="line-height: 1.5;"><span style="font-size: 14px;">Kh&aacute;ch h&agrave;ng lắng nghe 100% kết quả của model</span></li>
-    <li style="line-height: 1.5;"><span style="font-size: 14px;">Chi ph&iacute; tr&ecirc;n một cuộc gọi l&agrave; 10$ v&agrave; lợi nhuận kh&aacute;ch h&agrave;ng thu được tr&ecirc;n một cuộc gọi l&agrave; 20$</span></li>
+<p style="margin: 0in; font-family: Calibri, sans-serif; line-height: 1.5;"><span style="font-size: 14px; font-family: Calibri, sans-serif;">Khi kh&ocirc;ng &aacute;p dụng m&ocirc; h&igrave;nh, thực hiện chiến dịch với to&agrave;n bộ danh s&aacute;ch 41188 kh&aacute;ch h&agrave;ng c&oacute; sẵn, lợi nhuận l&agrave; -40$.&nbsp;</span></p>
+<p style="margin: 0in; font-family: Calibri, sans-serif; line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Dựa v&agrave;o m&ocirc; h&igrave;nh, nh&oacute;m chọn lọc được 2784 kh&aacute;ch h&agrave;ng tiềm năng v&agrave; giả sử:</span></span></p>
+<ul style='font-size: 16px; box-sizing: border-box; margin: 0px 0px 1rem; padding: 0px; caret-color: rgb(38, 39, 48); color: rgb(38, 39, 48); font-family: "IBM Plex Sans", sans-serif; list-style-type: square;'>
+    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;"><span style="box-sizing: border-box;">Kh&aacute;ch h&agrave;ng lắng nghe 100% kết quả của model</span></span></span></li>
+    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;"><span style="box-sizing: border-box;">Chi ph&iacute; tr&ecirc;n một cuộc gọi l&agrave; 10$ v&agrave; lợi nhuận kh&aacute;ch h&agrave;ng thu được tr&ecirc;n một cuộc gọi l&agrave; 20$</span></span></span></li>
 </ul>
-<p style="line-height: 1.5;"><span style="font-size: 14px;">Khi đ&oacute; kh&aacute;ch h&agrave;ng c&oacute; thể t&iacute;nh to&aacute;n lợi nhuận dựa v&agrave;o m&ocirc; h&igrave;nh t&iacute;nh to&aacute;n b&ecirc;n dưới.</span></p>
+<p style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;"><span style="box-sizing: border-box;">Khi đ&oacute; dự t&iacute;nh lợi nhuận kh&aacute;ch h&agrave;ng sẽ thu lại được l&agrave; <span style="caret-color: rgb(38, 39, 48); color: rgb(38, 39, 48); background-color: rgb(255, 255, 255);"><strong>19,608.7</strong></span><strong>&nbsp;$</strong>.</span></span></span></p>
+<p style="line-height: 1.5;"><span style="box-sizing: border-box; font-size: 14px;"><span style="font-family: Calibri, sans-serif;">Ngo&agrave;i ra, qu&yacute; doanh nghiệp v&agrave; c&aacute;c bạn c&oacute; thể đ&aacute;nh gi&aacute; lợi nhuận r&otilde; hơn bằng c&aacute;ch nhập v&agrave;o &ocirc; t&iacute;nh to&aacute;n b&ecirc;n dưới.</span></span></p>
 """
 
 decision_tree_note = """
@@ -425,65 +428,80 @@ decision_tree_note = """
 """
 
 variable_df1 = """
+<p>
+    <font face="Calibri, sans-serif"><span style="font-size: 14px;"><strong>Biến kh&aacute;ch h&agrave;ng:</strong></span></font>
+</p>
+<ul style="list-style-type: square;">
+    <li style="line-height: 1.5;"><span style="box-sizing: border-box; font-size: 14px; font-family: Calibri, sans-serif;">Age: Độ tuổi của kh&aacute;ch h&agrave;ng thời điểm được li&ecirc;n hệ</span></li>
+    <li style="line-height: 1.5;"><span style="box-sizing: border-box; font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 14px;">Job: C&ocirc;ng việc của kh&aacute;ch h&agrave;ng</span></span></li>
+    <li style="line-height: 1.5;"><span style="box-sizing: border-box; font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 14px;">Marital: T&igrave;nh trạng h&ocirc;n nh&acirc;n&nbsp;</span></span></li>
+    <li style="line-height: 1.5;"><span style="box-sizing: border-box; font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 14px;">Education: Tr&igrave;nh độ học vấn cao nhất hiện c&oacute;</span></span></li>
+    <li style="line-height: 1.5;"><span style="box-sizing: border-box; font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 14px;">Default: T&igrave;nh trạng nợ xấu</span></span></li>
+    <li style="line-height: 1.5;"><span style="box-sizing: border-box; font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 14px;">Housing: T&igrave;nh trạng nh&agrave; ở hiện tại</span></span></li>
+    <li style="line-height: 1.5;"><span style="box-sizing: border-box; font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 14px;">Loan: T&igrave;nh trạng nợ</span></span></li>
+</ul>
+<p style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><strong><span style="font-size: 14px;">Biến x&atilde; hội:</span></strong></span></p>
 <ul style='font-size: 16px; box-sizing: border-box; margin: 0px; padding: 0px; caret-color: rgb(38, 39, 48); color: rgb(38, 39, 48); font-family: "IBM Plex Sans", sans-serif; list-style-type: square;'>
-    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="box-sizing: border-box; font-size: 14px; font-family: Calibri, sans-serif;">Age: Độ tuổi của kh&aacute;ch h&agrave;ng thời điểm được li&ecirc;n hệ</span></li>
-    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="box-sizing: border-box; font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 14px;">Job: C&ocirc;ng việc của kh&aacute;ch h&agrave;ng</span></span></li>
-    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="box-sizing: border-box; font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 14px;">Marital: T&igrave;nh trạng h&ocirc;n nh&acirc;n&nbsp;</span></span></li>
-    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="box-sizing: border-box; font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 14px;">Education: Tr&igrave;nh độ học vấn cao nhất hiện c&oacute;</span></span></li>
-    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="box-sizing: border-box; font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 14px;">Default: T&igrave;nh trạng nợ xấu</span></span></li>
-    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="box-sizing: border-box; font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 14px;">Housing: T&igrave;nh trạng nh&agrave; ở hiện tại</span></span></li>
-    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="box-sizing: border-box; font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 14px;">Loan: T&igrave;nh trạng nợ</span></span></li>
-    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="box-sizing: border-box; font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 14px;">Contact: C&aacute;ch thức li&ecirc;n hệ của ng&acirc;n h&agrave;ng</span></span></li>
-    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="box-sizing: border-box; font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 14px;">Month: Th&aacute;ng m&agrave; chiến dịch li&ecirc;n hệ kh&aacute;ch h&agrave;ng n&agrave;y lần cuối</span></span></li>
-    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="box-sizing: border-box; font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 14px;">Day_of_week: Ng&agrave;y m&agrave; chiến dịch li&ecirc;n hệ kh&aacute;ch h&agrave;ng n&agrave;y lần cuối</span></span></li>
-    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="box-sizing: border-box; font-size: 14px; font-family: Calibri, sans-serif;">Duration: Tổng thời gian gọi điện trong lần li&ecirc;n hệ cuối c&ugrave;ng với kh&aacute;ch h&agrave;ng</span></li>
-    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="box-sizing: border-box; font-size: 14px; font-family: Calibri, sans-serif;">Compaign: Số lần li&ecirc;n hệ đối với kh&aacute;ch h&agrave;ng n&agrave;y v&agrave; trong chiến dịch hiện tại</span></li>
+    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box; font-size: 14px;">Emp.var.rate: Hệ số thay đổi c&ocirc;ng việc - t&iacute;nh theo qu&yacute;</span></span></span></li>
+    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box; font-size: 14px;">Cons.price.idx: Hệ số gi&aacute; ti&ecirc;u d&ugrave;ng - t&iacute;nh theo th&aacute;ng</span></span></span></li>
+    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box; font-size: 14px;">Cons.conf.ind: Chỉ số lạc quan thị trường - t&iacute;nh theo th&aacute;ng</span></span></span></li>
+    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box; font-size: 14px;">Euribor3m: Tỉ lệ tham chiếu được x&acirc;y dựng từ l&atilde;i suất trung b&igrave;nh m&agrave; c&aacute;c ng&acirc;n h&agrave;ng Ch&acirc;u &Acirc;u cung cấp cho vay ngắn hạn kh&ocirc;ng c&oacute; t&agrave;i sản bảo đảm tr&ecirc;n thị trường li&ecirc;n ng&acirc;n h&agrave;ng)</span></span></span></li>
+    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 14px;">nr.employed: Số lượng người c&oacute; việc l&agrave;m t&iacute;nh theo qu&yacute;</span></span></li>
+    <li style="box-sizing: border-box; margin: 0.2em 0px 0.2em 1.2em; padding: 0px 0px 0px 0.6em; font-size: 1rem; line-height: 1.5;"><span style="box-sizing: border-box; font-size: 14px; font-family: Calibri, sans-serif;">y: Quyết định kh&aacute;ch h&agrave;ng về việc gửi tiền tiết kiệm</span></li>
 </ul>
 """
 
 variable_df2 = """
-<ul style="list-style-type: square;">
-    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Pdays: Số ng&agrave;y tr&ocirc;i qua t&iacute;nh từ lần cuối li&ecirc;n hệ từ chiến dịch trước</span></span></li>
-    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Previous: Số lần li&ecirc;n hệ trước của kh&aacute;ch h&agrave;ng cho chiến dịch trước</span></span></li>
-    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Poutcome: Kết quả của kh&aacute;ch h&agrave;ng với chiến dịch lần trước</span></span></li>
-    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Emp.var.rate: Hệ số thay đổi c&ocirc;ng việc - t&iacute;nh theo qu&yacute;</span></span></li>
-    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Cons.price.idx: Hệ số gi&aacute; ti&ecirc;u d&ugrave;ng - t&iacute;nh theo th&aacute;ng</span></span></li>
-    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Cons.conf.ind: Chỉ số lạc quan thị trường - t&iacute;nh theo th&aacute;ng</span></span></li>
-    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Euribor3m: Tỉ lệ tham chiếu được x&acirc;y dựng từ l&atilde;i suất trung b&igrave;nh m&agrave; c&aacute;c ng&acirc;n h&agrave;ng Ch&acirc;u &Acirc;u cung cấp cho vay ngắn hạn kh&ocirc;ng c&oacute; t&agrave;i sản bảo đảm tr&ecirc;n thị trường li&ecirc;n ng&acirc;n h&agrave;ng)</span></span></li>
-    <li style="line-height: 1.5;"><span style="font-size: 14px; font-family: Calibri, sans-serif;">nr.employed: Số lượng người c&oacute; việc l&agrave;m t&iacute;nh theo qu&yacute;</span></li>
-    <li style="line-height: 1.5;"><span style="font-size: 14px; font-family: Calibri, sans-serif;">y: Quyết định kh&aacute;ch h&agrave;ng về việc gửi tiền tiết kiệm</span></li>
+<ul style='font-size: 16px; box-sizing: border-box; margin: 0px; padding: 0px; caret-color: rgb(38, 39, 48); color: rgb(38, 39, 48); font-family: "IBM Plex Sans", sans-serif; list-style-type: square;'>
+    <li style="line-height: 1.5;"><span style="box-sizing: border-box; font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 14px;"><strong>Biến li&ecirc;n quan đến chiến dịch:</strong></span></span></li>
 </ul>
+<ul style="list-style-type: square;">
+    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box; font-size: 14px;">Contact: C&aacute;ch thức li&ecirc;n hệ của ng&acirc;n h&agrave;ng</span></span></span></li>
+    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box; font-size: 14px;">Month: Th&aacute;ng m&agrave; chiến dịch li&ecirc;n hệ kh&aacute;ch h&agrave;ng n&agrave;y lần cuối</span></span></span></li>
+    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box; font-size: 14px;">Day_of_week: Ng&agrave;y m&agrave; chiến dịch li&ecirc;n hệ kh&aacute;ch h&agrave;ng n&agrave;y lần cuối</span></span></span></li>
+    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 14px;">Duration: Tổng thời gian gọi điện trong lần li&ecirc;n hệ cuối c&ugrave;ng với kh&aacute;ch h&agrave;ng</span></span></li>
+    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 14px;">Compaign: Số lần li&ecirc;n hệ đối với kh&aacute;ch h&agrave;ng n&agrave;y v&agrave; trong chiến dịch hiện tại</span></span></li>
+    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box; font-size: 14px;">Pdays: Số ng&agrave;y tr&ocirc;i qua t&iacute;nh từ lần cuối li&ecirc;n hệ từ chiến dịch trước</span></span></span></li>
+    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box; font-size: 14px;">Previous: Số lần li&ecirc;n hệ trước của kh&aacute;ch h&agrave;ng cho chiến dịch trước</span></span></span></li>
+    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box; font-size: 14px;">Poutcome: Kết quả của kh&aacute;ch h&agrave;ng với chiến dịch lần trước</span></span></span></li>
+</ul>
+<p style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box; font-size: 14px;"><br></span></span></span></p>
+<p style="line-height: 1.5;"><br></p>
 """
 
 insight_01 = """
-<p style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif; font-size: 14px; font-weight: bold;">1. Ch&acirc;n dung kh&aacute;ch h&agrave;ng tiềm năng:</span></p>
+<p style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif; font-size: 14px; white-space: pre-wrap; background-color: rgb(255, 255, 255); font-weight: bold;">Ch&acirc;n dung kh&aacute;ch h&agrave;ng tiềm năng:</span></p>
 <ul style="list-style-type: square;">
-    <li style="font-size: 14px; font-family: Calibri, sans-serif; line-height: 1.5;">Tuổi: 30-50.</li>
-    <li style="font-size: 14px; font-family: Calibri, sans-serif; line-height: 1.5;">Nghề nghiệp: sinh vi&ecirc;n, người đ&atilde; nghỉ hưu v&agrave; c&ocirc;ng nh&acirc;n.</li>
-    <li style="font-size: 14px; font-family: Calibri, sans-serif; line-height: 1.5;">T&igrave;nh trạng h&ocirc;n nh&acirc;n: phần lớn l&agrave; độc th&acirc;n hoặc chưa x&aacute;c định.</li>
-    <li style="font-size: 14px; font-family: Calibri, sans-serif; line-height: 1.5;">Học vấn: Người thất học (v&igrave; họ kh&ocirc;ng c&oacute; nhiều kiến thức để t&igrave;m hiểu c&aacute;c phương ph&aacute;p đầu tư v&agrave; sinh lời kh&aacute;c).</li>
+    <li style="line-height: 1.5;"><span style="font-size: 14px;"><span style="font-family: Calibri, sans-serif;"><span style="white-space: pre-wrap; background-color: rgb(255, 255, 255);">Tuổi: 30-50.&nbsp;</span></span></span></li>
+    <li style="line-height: 1.5;"><span style="font-size: 14px;"><span style="font-family: Calibri, sans-serif;"><span style="white-space: pre-wrap; background-color: rgb(255, 255, 255);">Nghề nghiệp: sinh vi&ecirc;n, người đ&atilde; nghỉ hưu v&agrave; người thất nghiệp.&nbsp;</span></span></span></li>
+    <li style="line-height: 1.5;"><span style="font-size: 14px;"><span style="font-family: Calibri, sans-serif;"><span style="white-space: pre-wrap; background-color: rgb(255, 255, 255);">T&igrave;nh trạng h&ocirc;n nh&acirc;n: phần lớn l&agrave; độc th&acirc;n hoặc chưa x&aacute;c định.&nbsp;</span></span></span></li>
+    <li style="line-height: 1.5;"><span style="font-size: 14px;"><span style="font-family: Calibri, sans-serif;"><span style="white-space: pre-wrap; background-color: rgb(255, 255, 255);">Học vấn: Người thất học (v&igrave; họ kh&ocirc;ng c&oacute; nhiều kiến thức để t&igrave;m hiểu c&aacute;c phương ph&aacute;p đầu tư v&agrave; sinh lời kh&aacute;c).&nbsp;</span></span></span></li>
 </ul>
-<p style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;"><span style="font-weight: bold;">2. Th&ocirc;ng tin chiến dịch:</span></span></span></p>
+<p style="line-height: 1.5;"><span style="font-size: 14px;"><span style="font-family: Calibri, sans-serif;"><span style="white-space: pre-wrap; background-color: rgb(255, 255, 255); font-weight: bold;">Th&ocirc;ng tin chiến dịch:</span><span style="white-space: pre-wrap; background-color: rgb(255, 255, 255);">&nbsp;</span></span></span></p>
 <ul style="list-style-type: square;">
-    <li style="font-size: 14px; font-family: Calibri, sans-serif; line-height: 1.5;">Thời lượng cuộc gọi: khoảng 100-300s, kh&aacute;ch c&oacute; đủ thời gian để tr&ograve; chuyện v&agrave; được tư vấn những th&ocirc;ng tin cần thiết.</li>
-    <li style="font-size: 14px; font-family: Calibri, sans-serif; line-height: 1.5;">Số lần thực hiện cuộc gọi: phần lớn l&agrave; lần đầu thực hiện cuộc gọi hoặc li&ecirc;n lạc &lt; 3 lần, họ thường l&agrave; kh&aacute;ch h&agrave;ng mới, chưa từng li&ecirc;n lạc.&nbsp;</li>
-    <li style="font-size: 14px; font-family: Calibri, sans-serif; line-height: 1.5;">Đối với những kh&aacute;ch h&agrave;ng đ&atilde; được tiếp cận ở chiến dịch trước, kh&ocirc;ng n&ecirc;n để mất li&ecirc;n lạc với kh&aacute;ch h&agrave;ng qu&aacute; l&acirc;u. Chu kỳ tương t&aacute;c tốt nhất giữa c&aacute;c chiến dịch sẽ l&agrave; 5 ng&agrave;y.</li>
-    <li style="font-size: 14px; font-family: Calibri, sans-serif; line-height: 1.5;">Nh&oacute;m kh&aacute;ch h&agrave;ng c&oacute; những khoản vay (nợ c&aacute; nh&acirc;n, mua nh&agrave;) trước đ&oacute; vẫn c&oacute; thể gửi tiền, tuy nhi&ecirc;n nh&oacute;m kh&aacute;ch h&agrave;ng c&oacute; nợ xấu &lsquo;default&rsquo; th&igrave; thường sẽ kh&ocirc;ng gửi tiền.</li>
+    <li style="line-height: 1.5;"><span style="font-size: 14px;"><span style="font-family: Calibri, sans-serif;"><span style="white-space: pre-wrap; background-color: rgb(255, 255, 255);">Thời lượng cuộc gọi: khoảng 100-400s, kh&aacute;ch c&oacute; đủ thời gian để tr&ograve; chuyện v&agrave; được tư vấn những th&ocirc;ng tin cần thiết.&nbsp;</span></span></span></li>
+    <li style="line-height: 1.5;"><span style="font-size: 14px;"><span style="font-family: Calibri, sans-serif;"><span style="white-space: pre-wrap; background-color: rgb(255, 255, 255);">Số lần thực hiện cuộc gọi: phần lớn l&agrave; lần đầu thực hiện cuộc gọi hoặc li&ecirc;n lạc &lt; 3 lần, họ thường l&agrave; kh&aacute;ch h&agrave;ng mới, chưa từng li&ecirc;n lạc.&nbsp;</span></span></span></li>
+    <li style="line-height: 1.5;"><span style="font-size: 14px;"><span style="font-family: Calibri, sans-serif;"><span style="white-space: pre-wrap; background-color: rgb(255, 255, 255);">Đối với những kh&aacute;ch h&agrave;ng đ&atilde; được tiếp cận ở chiến dịch trước, kh&ocirc;ng n&ecirc;n để mất li&ecirc;n lạc với kh&aacute;ch h&agrave;ng qu&aacute; l&acirc;u. Chu kỳ tương t&aacute;c tốt nhất giữa c&aacute;c chiến dịch sẽ l&agrave; 5 ng&agrave;y.&nbsp;</span></span></span></li>
+    <li style="line-height: 1.5;"><span style="font-size: 14px;"><span style="font-family: Calibri, sans-serif;"><span style="white-space: pre-wrap; background-color: rgb(255, 255, 255);">Nh&oacute;m kh&aacute;ch h&agrave;ng c&oacute; những khoản vay (nợ c&aacute; nh&acirc;n, mua nh&agrave;) trước đ&oacute; vẫn c&oacute; thể gửi tiền, tuy nhi&ecirc;n nh&oacute;m kh&aacute;ch h&agrave;ng c&oacute; nợ xấu &lsquo;default&rsquo; th&igrave; thường sẽ kh&ocirc;ng gửi tiền.&nbsp;</span></span></span></li>
+    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif; font-size: 14px; white-space: pre-wrap; background-color: rgb(255, 255, 255);">Tiếp cận th&ocirc;ng qua điện thoại di động mang đến tỉ lệ th&agrave;nh c&ocirc;ng đến &gt; 60%.</span></li>
 </ul>
 """
 
 insight_02 = """
 <ul style="list-style-type: square;">
-    <li style="font-size: 14px; font-family: Calibri, sans-serif; line-height: 1.5;"><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;">Tiếp cận th&ocirc;ng qua điện thoại di động mang đến tỉ lệ th&agrave;nh c&ocirc;ng đến &gt; 60%.</span></li>
-    <li style="font-size: 14px; font-family: Calibri, sans-serif; line-height: 1.5;"><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;">Tỉ lệ li&ecirc;n lạc gửi tiền th&agrave;nh c&ocirc;ng cao nhất l&agrave; v&agrave;o th&aacute;ng 3 (sau kỳ nghỉ Tết), tiếp đ&oacute; l&agrave; th&aacute;ng 12, th&aacute;ng 9, th&aacute;ng 10 v&agrave; th&aacute;ng 4.</span></li>
-    <li style="font-size: 14px; font-family: Calibri, sans-serif; line-height: 1.5;"><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;">Kh&ocirc;ng c&oacute; sự kh&aacute;c biệt nhiều giữa c&aacute;c ng&agrave;y trong tuần, tuy nhi&ecirc;n, khi v&agrave;o c&aacute;c ng&agrave;y giữa tuần như thứ 3 &amp; thứ 5 th&igrave; c&oacute; tỉ lệ th&agrave;nh c&ocirc;ng nhỉnh hơn một ch&uacute;t.</span></li>
+    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif; font-size: 14px; white-space: pre-wrap; background-color: rgb(255, 255, 255);">Tỉ lệ li&ecirc;n lạc gửi tiền th&agrave;nh c&ocirc;ng cao nhất l&agrave; v&agrave;o th&aacute;ng 3 (sau kỳ nghỉ Tết), tiếp đ&oacute; l&agrave; th&aacute;ng 4, th&aacute;ng 9, th&aacute;ng 10 v&agrave; th&aacute;ng 12.&nbsp;</span></li>
+    <li style="line-height: 1.5;"><span style="font-size: 14px;"><span style="font-family: Calibri, sans-serif;"><span style="white-space: pre-wrap; background-color: rgb(255, 255, 255);">Kh&ocirc;ng c&oacute; sự kh&aacute;c biệt nhiều giữa c&aacute;c ng&agrave;y trong tuần, tuy nhi&ecirc;n, khi li&ecirc;n lạc v&agrave;o c&aacute;c ng&agrave;y giữa tuần như thứ 3 &amp; thứ 5 th&igrave; c&oacute; tỉ lệ th&agrave;nh c&ocirc;ng nhỉnh hơn một ch&uacute;t.&nbsp;</span></span></span></li>
 </ul>
-<p style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;"><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;"><strong>3.</strong>&nbsp;</span><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; font-weight: bold;">C&aacute;c yếu tố kinh tế - x&atilde; hội:</span><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;">&nbsp;2 yếu tố c&oacute; ảnh hưởng nhiều nhất đến hiệu quả của chiến dịch: l&agrave; yếu tố d&acirc;n số c&oacute; việc l&agrave;m (nr.employed) v&agrave; chỉ số thể hiện độ tin tưởng v&agrave; lạc quan của kh&aacute;ch h&agrave;ng đối với thị trường (cons.conf.idx)</span></span></span></p>
-<p style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;"><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; font-weight: bold;">4. Th&ocirc;ng tin kh&aacute;c:</span></span></span></p>
+<p style="line-height: 1.5;"><span style="font-size: 14px;"><span style="font-family: Calibri, sans-serif;"><span style="white-space: pre-wrap; background-color: rgb(255, 255, 255); font-weight: bold;">C&aacute;c yếu tố kinh tế - x&atilde; hội:&nbsp;</span><span style="white-space: pre-wrap; background-color: rgb(255, 255, 255);">2 yếu tố c&oacute; ảnh hưởng nhiều nhất đến hiệu quả của chiến dịch: l&agrave; yếu tố d&acirc;n số c&oacute; việc l&agrave;m (nr.employed) v&agrave; chỉ số thể hiện độ tin tưởng v&agrave; lạc quan của kh&aacute;ch h&agrave;ng đối với thị trường (cons.conf.idx)&nbsp;</span></span></span></p>
+<p style="line-height: 1.5;"><span style="font-size: 14px;"><span style="font-family: Calibri, sans-serif;"><span style="white-space: pre-wrap; background-color: rgb(255, 255, 255); font-weight: bold;">Th&ocirc;ng tin kh&aacute;c:</span><span style="white-space: pre-wrap; background-color: rgb(255, 255, 255);">&nbsp;</span></span></span></p>
 <ul style="list-style-type: square;">
-    <li style="font-size: 14px; font-family: Calibri, sans-serif; line-height: 1.5;"><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;">Khi thực hiện cuộc gọi đến to&agrave;n bộ 41188 kh&aacute;ch h&agrave;ng,&nbsp;</span><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; font-weight: bold;"><em>88.7% kh&aacute;ch h&agrave;ng kh&ocirc;ng đồng &yacute;</em>&nbsp;</span><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;">v&agrave;&nbsp;</span><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; font-weight: bold;"><em>chỉ c&oacute; 11.3% đồng &yacute;</em>.</span><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;">&nbsp;Những kh&aacute;ch h&agrave;ng kh&ocirc;ng đồng &yacute; gửi tiền thường l&agrave; những người đang c&oacute; nợ xấu, c&oacute; thời lượng tương t&aacute;c/cuộc gọi = 0 hoặc qu&aacute; d&agrave;i (&gt;700s) trở l&ecirc;n hoặc đ&atilde; từng tiếp cận trước đ&oacute; nhưng kh&ocirc;ng th&agrave;nh c&ocirc;ng.</span></li>
-    <li style="font-size: 14px; font-family: Calibri, sans-serif; line-height: 1.5;"><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;">Tỉ lệ chuyển đổi từ Failure to YES l&agrave;&nbsp;</span><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; font-weight: bold;"><em>14%</em>&nbsp;</span><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;">trong khi tỉ lệ chuyển đổi từ Success to NO gần</span><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; font-weight: bold;">&nbsp;<em>35%</em></span><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;">&nbsp;-&gt; c&oacute; sự mất kh&aacute;ch h&agrave;ng.</span></li>
+    <li style="line-height: 1.5;"><span style="font-size: 14px;"><span style="font-family: Calibri, sans-serif;"><span style="white-space: pre-wrap; background-color: rgb(255, 255, 255);">Khi thực hiện cuộc gọi đến to&agrave;n bộ 41188 kh&aacute;ch h&agrave;ng,&nbsp;</span><span style="white-space: pre-wrap; background-color: rgb(255, 255, 255); font-weight: bold;">88.7% kh&aacute;ch h&agrave;ng kh&ocirc;ng đồng &yacute;&nbsp;</span><span style="white-space: pre-wrap; background-color: rgb(255, 255, 255);">v&agrave;&nbsp;</span><span style="white-space: pre-wrap; background-color: rgb(255, 255, 255); font-weight: bold;">chỉ c&oacute; 11.3% đồng &yacute;.</span><span style="white-space: pre-wrap; background-color: rgb(255, 255, 255);">&nbsp;Những kh&aacute;ch h&agrave;ng kh&ocirc;ng đồng &yacute; gửi tiền thường l&agrave; những người đang c&oacute; nợ xấu, c&oacute; thời lượng tương t&aacute;c/cuộc gọi = 0 hoặc qu&aacute; d&agrave;i (&gt;700s) trở l&ecirc;n hoặc đ&atilde; từng tiếp cận trước đ&oacute; nhưng kh&ocirc;ng th&agrave;nh c&ocirc;ng.&nbsp;</span></span></span></li>
+    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif; font-size: 14px;">Tỉ lệ chuyển đổi của những kh&aacute;ch h&agrave;ng thất bại trong chiến dịch trước đ&oacute; sang th&agrave;nh c&ocirc;ng trong chiến dịch lần n&agrave;y l&agrave; <strong>14%</strong>, trong khi đ&oacute; c&oacute; <strong>35%</strong> kh&aacute;ch h&agrave;ng đ&atilde; tiếp cận th&agrave;nh c&ocirc;ng trong chiến dịch lần trước lại tiếp cận thất bại trong chiến dịch lần n&agrave;y.</span></li>
 </ul>
+"""
+
+month = """
+<p style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif; font-size: 14px;">Nhận x&eacute;t:&nbsp;</span><span style="font-family: Calibri, sans-serif; font-size: 14px;">Danh s&aacute;ch li&ecirc;n lạc chủ yếu rơi v&agrave;o m&ugrave;a h&egrave;, đặc biệt l&agrave; th&aacute;ng 5 nhưng tỉ lệ th&agrave;nh c&ocirc;ng cao nhất l&agrave; v&agrave;o th&aacute;ng 3 (c&oacute; thể l&agrave; sau kỳ nghỉ Tết), tiếp đ&oacute; l&agrave; th&aacute;ng 4, th&aacute;ng 9, th&aacute;ng 10 v&agrave; th&aacute;ng 12.</span></p>
 """
 
 # comment_decision_tree = """
@@ -508,28 +526,37 @@ def visulize_feature_importances(model_importances,model_name):
 
 def page_01():
     
-    st.title("Team 01")
-    st.text(" Bài tập cuối khoá được hoàn thành bởi 04 thành viên bên dưới:")
+    st.header("NHÓM 01:")
+    st.title("Mô hình tiên đoán hiệu quả chiến dịch marketing qua điện thoại cho ngân hàng")
+    st.text("Bài cuối khoá được thực hiện bởi:")
 
     #Introduce team members
-    col1, col2, col3, col4, col5, col6  = st.beta_columns(6)
+    col1, col2, col3, col4, col5  = st.beta_columns((1,1,1,1,2))
 
     ava1 = Image.open("image/ava1.jpeg")
     ava2 = Image.open("image/ava2.jpeg")
     ava3 = Image.open("image/ava3.jpg")
     ava4 = Image.open("image/ava4.jpg")
+    ava5 = Image.open("image/mentor.png")
+    # ava6 = Image.open("image/mentor_tram.png")
 
-    col1.header("Nguyen")
+    col1.header("Nguyên")
     col1.image(ava1, use_column_width=True)
 
     col2.header("Linh")
     col2.image(ava2, use_column_width=True)
 
-    col3.header("Tuan")
+    col3.header("Tuấn")
     col3.image(ava3, use_column_width=True)
 
-    col4.header("Hai")
+    col4.header("Hải")
     col4.image(ava4, use_column_width=True)
+
+    col5.header("     Mentor: Long & Trâm")
+    col5.image(ava5, use_column_width=True)
+    
+    # col6.header("Mentor - Tram")
+    # col6.image(ava6, use_column_width=True)
 
     # Tham khảo: https://www.google.com/search?q=write+paragraph+in+streamlit+app&oq=write+paragraph+in+streamlit+app&aqs=chrome..69i57j33i160.10955j0j4&sourceid=chrome&ie=UTF-8#kpvalbx=_Dx_eYLayJ4y9rQGQ3J6YAg53
 
@@ -652,7 +679,7 @@ def page_01():
             st.set_option('deprecation.showPyplotGlobalUse', False)
 
 
-        if info_selectbox == "Các biến phương pháp tiếp cận":
+        if info_selectbox == "Các biến về chiến dịch":
             # bank_varible_selectbox = an2.selectbox("Tên biến",('contact','day_of_week','duration','campaign','pdays','previous','poutcome'))
 
             visualize_categorical_w_success(marketing_df,'contact',target = 'y')
@@ -669,7 +696,7 @@ def page_01():
             #visualize
             visualize_categorical_w_success(marketing_01 , 'month_num', target = 'y')
             st.pyplot()
-            #### st.markdown(month, True)
+            st.markdown(month, True)
 
             visualize_numerical(marketing_df,'duration')
             st.pyplot()
