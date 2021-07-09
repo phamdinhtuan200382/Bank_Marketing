@@ -115,13 +115,14 @@ def quick_predict_client(model):
             st.warning(result)
 
 def visualize_predicted_result(df, target):
-    st.subheader("The Predicted Percentage Of Success:")
+    st.subheader("The Predicted Percentage Of Success:");
     data = df.groupby(target).size().sort_values(ascending=False)
     label_dict = {1:'yes',0:'no'}
+    
     fig = plt.figure(figsize = (3,3))
-    plt.pie(x=data , autopct='%.1f%%',  labels= [label_dict[val] for val in data.index.tolist()], pctdistance=0.7, radius=1.1)
+    plt.pie(x=data , autopct="%.1f%%",  labels= [label_dict[val] for val in data.index.tolist()], pctdistance=0.7, radius=1.1)
     col1, col2, col3 = st.beta_columns(3)
-    col2.pyplot(fig)   
+    col2.pyplot(fig)  
     
   
 def predict_data_file(file,model):

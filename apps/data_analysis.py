@@ -26,6 +26,7 @@ marketing_df = pd.read_csv(file_path, sep=';')
 marketing_null = pd.read_csv(file_path, sep=';', na_values = na_lst, keep_default_na = True) 
 # Def Visualization
 na_lst = ["NA","","#NA","unknown"]
+
 def missing_exploration(data):
     total = data.isnull().sum().sort_values(ascending=False)
     percent = round((data.isnull().sum()/data.isnull().count()*100),2).sort_values(ascending=False)
@@ -379,13 +380,17 @@ overview_2 = """
 <p style="line-height: 1.5;"><span style="font-size: 14px;">Tuy nhi&ecirc;n, v&igrave; thời gian ban tổ chức đưa ra cho dự &aacute;n c&oacute; hạn cũng như v&igrave; l&agrave; lần đầu ti&ecirc;n trải nghiệm với dự &aacute;n Data science thực tế, nh&oacute;m kh&ocirc;ng tr&aacute;nh khỏi nhiều sai s&oacute;t trong qu&aacute; tr&igrave;nh l&agrave;m. Nh&oacute;m rất mong nhận được sự th&ocirc;ng cảm, g&oacute;p &yacute; từ qu&yacute; doanh nghiệp, ban tổ chức cũng như c&aacute;c bạn tham gia chương tr&igrave;nh để nh&oacute;m c&oacute; thể học tập, sửa chữa v&agrave; ho&agrave;n thiện b&agrave;i hơn.</span></p>
 """
 
-result_analysis = """
+result_analysis_01 = """
 <p style="line-height: 1.5;"><span style="font-size: 14px; font-family: Calibri, sans-serif;">Nhận x&eacute;t chung:</span></p>
 <ul style="list-style-type: square;">
     <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Nh&igrave;n v&agrave;o 2 cột AC đầu ti&ecirc;n, ta c&oacute; thể thấy với 4 model được chọn lọc để ph&acirc;n t&iacute;ch AC đều cho kết quả tốt tr&ecirc;n cả tập train v&agrave; tập test. Ngo&agrave;i ra sự kh&aacute;c biệt về AC giữa tập train v&agrave; tập test tr&ecirc;n mỗi model kh&ocirc;ng kh&aacute;c biệt nhiều, chứng tỏ kh&ocirc;ng c&oacute; sự kh&aacute;c thường về output của model.</span></span></li>
-    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Nh&igrave;n v&agrave;o 03 cột AC ở cuối, c&oacute; thể nhận thấy khi d&ugrave;ng XGBoost Classifier c&ugrave;ng với resampled data cho kết quả cao nhất tr&ecirc;n cả 3 chỉ số Precision, Recall v&agrave; F1 tr&ecirc;n biến y = &quot;Yes&quot;, đồng thời kết quả Accuracy của model cũng cao thứ hai so với c&aacute;c model kh&aacute;c..</span></span></li>
+    <li style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">Nh&igrave;n v&agrave;o 03 cột AC ở cuối, c&oacute; thể nhận thấy khi d&ugrave;ng XGBoost Classifier c&ugrave;ng với resampled data cho kết quả cao nhất tr&ecirc;n cả 3 chỉ số Precision, Recall v&agrave; F1 tr&ecirc;n biến y = &quot;Yes&quot;, đồng thời kết quả Accuracy của model cũng cao nhất so với c&aacute;c model kh&aacute;c..</span></span></li>
 </ul>
 <p style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;">-&gt; Nh&oacute;m quyết định sử dụng model </span></span><span style="color: rgb(0, 0, 0); font-family: Calibri, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">XGBoost Classifier with under resampled data v&agrave;o thực tế.</span></p>
+"""
+
+result_analysis_02 = """
+
 """
 
 flow_source = """
@@ -436,13 +441,52 @@ variable_df2 = """
 </ul>
 """
 
+insight_01 = """
+<p style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif; font-size: 14px; font-weight: bold;">1. Ch&acirc;n dung kh&aacute;ch h&agrave;ng tiềm năng:</span></p>
+<ul style="list-style-type: square;">
+    <li style="font-size: 14px; font-family: Calibri, sans-serif; line-height: 1.5;">Tuổi: 30-50.</li>
+    <li style="font-size: 14px; font-family: Calibri, sans-serif; line-height: 1.5;">Nghề nghiệp: sinh vi&ecirc;n, người đ&atilde; nghỉ hưu v&agrave; c&ocirc;ng nh&acirc;n.</li>
+    <li style="font-size: 14px; font-family: Calibri, sans-serif; line-height: 1.5;">T&igrave;nh trạng h&ocirc;n nh&acirc;n: phần lớn l&agrave; độc th&acirc;n hoặc chưa x&aacute;c định.</li>
+    <li style="font-size: 14px; font-family: Calibri, sans-serif; line-height: 1.5;">Học vấn: Người thất học (v&igrave; họ kh&ocirc;ng c&oacute; nhiều kiến thức để t&igrave;m hiểu c&aacute;c phương ph&aacute;p đầu tư v&agrave; sinh lời kh&aacute;c).</li>
+</ul>
+<p style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;"><span style="font-weight: bold;">2. Th&ocirc;ng tin chiến dịch:</span></span></span></p>
+<ul style="list-style-type: square;">
+    <li style="font-size: 14px; font-family: Calibri, sans-serif; line-height: 1.5;">Thời lượng cuộc gọi: khoảng 100-300s, kh&aacute;ch c&oacute; đủ thời gian để tr&ograve; chuyện v&agrave; được tư vấn những th&ocirc;ng tin cần thiết.</li>
+    <li style="font-size: 14px; font-family: Calibri, sans-serif; line-height: 1.5;">Số lần thực hiện cuộc gọi: phần lớn l&agrave; lần đầu thực hiện cuộc gọi hoặc li&ecirc;n lạc &lt; 3 lần, họ thường l&agrave; kh&aacute;ch h&agrave;ng mới, chưa từng li&ecirc;n lạc.&nbsp;</li>
+    <li style="font-size: 14px; font-family: Calibri, sans-serif; line-height: 1.5;">Đối với những kh&aacute;ch h&agrave;ng đ&atilde; được tiếp cận ở chiến dịch trước, kh&ocirc;ng n&ecirc;n để mất li&ecirc;n lạc với kh&aacute;ch h&agrave;ng qu&aacute; l&acirc;u. Chu kỳ tương t&aacute;c tốt nhất giữa c&aacute;c chiến dịch sẽ l&agrave; 5 ng&agrave;y.</li>
+    <li style="font-size: 14px; font-family: Calibri, sans-serif; line-height: 1.5;">Nh&oacute;m kh&aacute;ch h&agrave;ng c&oacute; những khoản vay (nợ c&aacute; nh&acirc;n, mua nh&agrave;) trước đ&oacute; vẫn c&oacute; thể gửi tiền, tuy nhi&ecirc;n nh&oacute;m kh&aacute;ch h&agrave;ng c&oacute; nợ xấu &lsquo;default&rsquo; th&igrave; thường sẽ kh&ocirc;ng gửi tiền.</li>
+</ul>
+"""
+
+insight_02 = """
+<ul style="list-style-type: square;">
+    <li style="font-size: 14px; font-family: Calibri, sans-serif; line-height: 1.5;"><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;">Tiếp cận th&ocirc;ng qua điện thoại di động mang đến tỉ lệ th&agrave;nh c&ocirc;ng đến &gt; 60%.</span></li>
+    <li style="font-size: 14px; font-family: Calibri, sans-serif; line-height: 1.5;"><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;">Tỉ lệ li&ecirc;n lạc gửi tiền th&agrave;nh c&ocirc;ng cao nhất l&agrave; v&agrave;o th&aacute;ng 3 (sau kỳ nghỉ Tết), tiếp đ&oacute; l&agrave; th&aacute;ng 12, th&aacute;ng 9, th&aacute;ng 10 v&agrave; th&aacute;ng 4.</span></li>
+    <li style="font-size: 14px; font-family: Calibri, sans-serif; line-height: 1.5;"><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;">Kh&ocirc;ng c&oacute; sự kh&aacute;c biệt nhiều giữa c&aacute;c ng&agrave;y trong tuần, tuy nhi&ecirc;n, khi v&agrave;o c&aacute;c ng&agrave;y giữa tuần như thứ 3 &amp; thứ 5 th&igrave; c&oacute; tỉ lệ th&agrave;nh c&ocirc;ng nhỉnh hơn một ch&uacute;t.</span></li>
+</ul>
+<p style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;"><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;"><strong>3.</strong>&nbsp;</span><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; font-weight: bold;">C&aacute;c yếu tố kinh tế - x&atilde; hội:</span><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;">&nbsp;2 yếu tố c&oacute; ảnh hưởng nhiều nhất đến hiệu quả của chiến dịch: l&agrave; yếu tố d&acirc;n số c&oacute; việc l&agrave;m (nr.employed) v&agrave; chỉ số thể hiện độ tin tưởng v&agrave; lạc quan của kh&aacute;ch h&agrave;ng đối với thị trường (cons.conf.idx)</span></span></span></p>
+<p style="line-height: 1.5;"><span style="font-family: Calibri, sans-serif;"><span style="font-size: 14px;"><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; font-weight: bold;">4. Th&ocirc;ng tin kh&aacute;c:</span></span></span></p>
+<ul style="list-style-type: square;">
+    <li style="font-size: 14px; font-family: Calibri, sans-serif; line-height: 1.5;"><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;">Khi thực hiện cuộc gọi đến to&agrave;n bộ 41188 kh&aacute;ch h&agrave;ng,&nbsp;</span><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; font-weight: bold;"><em>88.7% kh&aacute;ch h&agrave;ng kh&ocirc;ng đồng &yacute;</em>&nbsp;</span><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;">v&agrave;&nbsp;</span><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; font-weight: bold;"><em>chỉ c&oacute; 11.3% đồng &yacute;</em>.</span><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;">&nbsp;Những kh&aacute;ch h&agrave;ng kh&ocirc;ng đồng &yacute; gửi tiền thường l&agrave; những người đang c&oacute; nợ xấu, c&oacute; thời lượng tương t&aacute;c/cuộc gọi = 0 hoặc qu&aacute; d&agrave;i (&gt;700s) trở l&ecirc;n hoặc đ&atilde; từng tiếp cận trước đ&oacute; nhưng kh&ocirc;ng th&agrave;nh c&ocirc;ng.</span></li>
+    <li style="font-size: 14px; font-family: Calibri, sans-serif; line-height: 1.5;"><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;">Tỉ lệ chuyển đổi từ Failure to YES l&agrave;&nbsp;</span><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; font-weight: bold;"><em>14%</em>&nbsp;</span><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;">trong khi tỉ lệ chuyển đổi từ Success to NO gần</span><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; font-weight: bold;">&nbsp;<em>35%</em></span><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;">&nbsp;-&gt; c&oacute; sự mất kh&aacute;ch h&agrave;ng.</span></li>
+</ul>
+"""
+
 # comment_decision_tree = """
 
 # """
 
 
+# model result
+result_comparison = pd.read_csv('data/AC_result.csv',sep=',', index_col=0)
+metric_file_path = "data/AC_result.csv"
+xgboost_clf_file_path = "model/pkl_xgboost_model.pkl"
+log_clf_file_path = "model/pkl_log_model.pkl"
+tree_clf_file_path = "model/pkl_decisionT_model.pkl"
+grboost_clf_file_path = "model/pkl_grboost_model.pkl"
 
-def main():
+
+def page_01():
     
     st.title("Team 01")
     st.text(" Bài tập cuối khoá được hoàn thành bởi 04 thành viên bên dưới:")
@@ -511,161 +555,166 @@ def main():
     #show dataframe with filter
     marketing_w_10_rows = marketing_df[0:20]
     st.subheader("DataFrame")
-    filtered = st.multiselect("Filter columns", options=list(marketing_w_10_rows.columns), default=list(marketing_w_10_rows.columns))
-    st.write(marketing_w_10_rows[filtered])
+    # filtered = st.multiselect("Filter columns", options=list(marketing_w_10_rows.columns), default=list(marketing_w_10_rows.columns))
+    st.write(marketing_w_10_rows)
+
 
     # Create selected box to display chart
-    st.subheader("Data Visualization")
-    ax_size = 8
-    title_size = 12
-    an1, an2 = st.beta_columns(2)
-    info_selectbox = an1.selectbox(
-    "Nội dung phân tích",
-    ("Thông tin chung", "Các biến khách hàng", "Các biến phương pháp tiếp cận", "Các biến xã hội","Lưu ý chung"))
+    st.subheader("Data Insight")
+    col1, col2 = st.beta_columns(2)
+    col1.markdown(insight_01, True)
+    col2.markdown(insight_02, True)
 
-    if info_selectbox == "Thông tin chung":
-        # Tỉ lệ Missing của các biến
-        missing_data = missing_exploration(marketing_null)
+        # # Tỉ lệ Missing của các biến
+        # missing_data = missing_exploration(marketing_null)
 
-        fig, (ax1,ax2) = plt.subplots(nrows=1, ncols=2, figsize=(14,4)) 
-        #Percentage of Target value
-        data = marketing_df.groupby('y').size().sort_values(ascending=False)
-        ax1.pie(x=data , autopct="%.1f%%", explode=[0.05]*len(data), labels=data.index.tolist());
-        ax1.set_title("The percentage of Target value", fontsize=title_size);
+        # fig, (ax1,ax2) = plt.subplots(nrows=1, ncols=2, figsize=(14,4)) 
+        # #Percentage of Target value
+        # data = marketing_df.groupby('y').size().sort_values(ascending=False)
+        # ax1.pie(x=data , autopct="%.1f%%", explode=[0.05]*len(data), labels=data.index.tolist());
+        # ax1.set_title("The percentage of Target value", fontsize=title_size);
 
-        # Visualiza missing value percent
-        sns.barplot(x=missing_data.index, y=missing_data['Percent %'], ax = ax2)
-        ax2.set_title('Percent missing data by feature', fontsize=title_size)
+        # # Visualiza missing value percent
+        # sns.barplot(x=missing_data.index, y=missing_data['Percent %'], ax = ax2)
+        # ax2.set_title('Percent missing data by feature', fontsize=title_size)
 
-        for ax in fig.axes:
-            ax.tick_params(labelrotation=45)
-        plt.tick_params(axis='both', which='major', labelsize=ax_size)
-        st.pyplot()
-        st.set_option('deprecation.showPyplotGlobalUse', False)
+        # for ax in fig.axes:
+        #     ax.tick_params(labelrotation=45)
+        # plt.tick_params(axis='both', which='major', labelsize=ax_size)
+        # st.pyplot()
+        # st.set_option('deprecation.showPyplotGlobalUse', False)
 
-        #Text explain
-        st.markdown(general, True)
+        # #Text explain
+        # st.markdown(general, True)
+    
+        
 
     client_varible = {'age': age,'job': job, 'marital': marital,'education': education,'default': default, 'housing': housing, 'loan': loan,"emp.var.rate": emp_var_rate, "cons.price.idx" : cons_price_idx, "cons.conf.idx" : cons_conf_idx, "euribor3m" : euribor3m, "nr.employed" : nr_employed, 'contact': contact,'day_of_week': day_of_week,'duration': duration,'campaign': campaign,'pdays': pdays,'previous': previous,'poutcome': poutcome}
-
-    if info_selectbox == "Các biến khách hàng":
-        varible_selectbox = an2.selectbox("Tên biến", ('age','job','marital','education','default', 'housing', 'loan'))
-        if varible_selectbox == "age":
+    my_expander = st.beta_expander("Click để xem được giải thích chi tiết!", expanded=True)
+    with my_expander:
+        ax_size = 8
+        title_size = 12
+        an1, an2 = st.beta_columns(2)
+        info_selectbox = an1.selectbox(
+        "Nội dung phân tích",
+        ("Các biến khách hàng", "Các biến phương pháp tiếp cận", "Các biến xã hội"))
+        if info_selectbox == "Các biến khách hàng":
+            # varible_selectbox = an2.selectbox("Tên biến", ('age','job','marital','education','default', 'housing', 'loan'))
             visualize_numerical(marketing_df,'age',target = 'y')
+            st.pyplot()
+            st.markdown(age, True)
             
-        if varible_selectbox == "job":
             visualize_categorical_w_success(marketing_df,'job',target = 'y')
+            st.pyplot()
+            st.markdown(job, True)
 
-        if varible_selectbox == "marital":
             visualize_categorical_w_success(marketing_df,'marital',target = 'y')
+            st.pyplot()
+            st.markdown(marital, True)
 
-        if varible_selectbox == "education":
             visualize_categorical_w_success_percent(marketing_df,'education',target = 'y')
+            st.pyplot()
+            st.markdown(education, True)
 
-        if varible_selectbox == "default":
             visualize_categorical_w_success_percent(marketing_df,'default',target = 'y')
-        
-        if varible_selectbox == "housing":
+            st.pyplot()
+            st.markdown(default, True)
+            
             visualize_categorical_w_success(marketing_df,'housing',target = 'y')
-        
-        if varible_selectbox == "loan":
+            st.pyplot()
+            st.markdown(housing, True)
+            
             visualize_categorical_w_success(marketing_df,'loan',target = 'y')
-        st.pyplot()
-        st.set_option('deprecation.showPyplotGlobalUse', False)
+            st.pyplot()
+            st.markdown(loan, True)
+            st.pyplot()
 
-        # visualization
-        if varible_selectbox in client_varible.keys():
-            st.markdown(client_varible[varible_selectbox], True)
-    
-    if info_selectbox == "Các biến phương pháp tiếp cận":
-        bank_varible_selectbox = an2.selectbox("Tên biến",('contact','day_of_week','duration','campaign','pdays','previous','poutcome'))
+            st.set_option('deprecation.showPyplotGlobalUse', False)
 
-        if bank_varible_selectbox == 'contact':
+
+        if info_selectbox == "Các biến phương pháp tiếp cận":
+            # bank_varible_selectbox = an2.selectbox("Tên biến",('contact','day_of_week','duration','campaign','pdays','previous','poutcome'))
+
             visualize_categorical_w_success(marketing_df,'contact',target = 'y')
+            st.pyplot()
+            st.markdown(contact, True)
 
-        if bank_varible_selectbox == 'day_of_week':
             visualize_categorical_w_success_percent(marketing_df,'day_of_week',target = 'y')
+            st.pyplot()
+            st.markdown(day_of_week, True)
 
-        if bank_varible_selectbox == 'month':
             look_up = {'jan': 1, 'feb': 2, 'mar': 3,'apr':4,'may': 5, 'jun': 6, 'jul':7, 'aug':8,'sep': 9,'oct': 10,'nov': 11,'dec':12}
             marketing_01 = marketing_df.copy()
             marketing_01['month_num']  = marketing_01.month.map(look_up)
             #visualize
             visualize_categorical_w_success(marketing_01 , 'month_num', target = 'y')
+            st.pyplot()
+            #### st.markdown(month, True)
 
-        if bank_varible_selectbox == 'duration':
             visualize_numerical(marketing_df,'duration')
+            st.pyplot()
+            st.markdown(duration, True)
         
-        if bank_varible_selectbox == 'campaign':
             visualize_categorical_w_success(marketing_df,'campaign',target = 'y')
+            st.pyplot()
+            st.markdown(campaign, True)
 
-        if bank_varible_selectbox == 'pdays':
             data = marketing_df[marketing_df.pdays != 999]
             column = 'pdays'
             visualize_numerical(data,column)
+            st.pyplot()
+            st.markdown(pdays, True)
 
-        if bank_varible_selectbox == 'previous':
             visualize_numerical(marketing_df,'previous')
+            st.pyplot()
+            st.markdown(previous, True)
 
-        if bank_varible_selectbox == 'poutcome':
             visualize_categorical_w_success(marketing_df,'poutcome',target = 'y')
-        st.pyplot()
-        st.set_option('deprecation.showPyplotGlobalUse', False)
+            st.pyplot()
+            st.markdown(poutcome, True)
+
+            st.set_option('deprecation.showPyplotGlobalUse', False)
 
         # text explaination
-        if bank_varible_selectbox in client_varible.keys():
-            st.markdown(client_varible[bank_varible_selectbox], True)
+        # if bank_varible_selectbox in client_varible.keys():
+        #     st.markdown(client_varible[bank_varible_selectbox], True)
 
-    if info_selectbox == "Các biến xã hội":
-        social_varible_selectbox = an2.selectbox("Tên biến", ("emp.var.rate", "cons.price.idx", "cons.conf.idx", "euribor3m", "nr.employed"))
-        # Visualization
-        visualize_numerical(marketing_df,social_varible_selectbox)
-        st.pyplot()
-        st.set_option('deprecation.showPyplotGlobalUse', False)
-        # Explain Text
-        if social_varible_selectbox in client_varible.keys():
-            st.markdown(client_varible[social_varible_selectbox], True)
+        if info_selectbox == "Các biến xã hội":
+            social_varible_selectbox = ("emp.var.rate", "cons.price.idx", "cons.conf.idx", "euribor3m", "nr.employed")
+            # Visualization
+            for i in social_varible_selectbox:
+                visualize_numerical(marketing_df,i)
+                st.pyplot()
+                st.set_option('deprecation.showPyplotGlobalUse', False)
+                # Explain Text
+                st.markdown(client_varible[i], True)
 
-    if info_selectbox == "Lưu ý chung":
-        col1, col2  = st.beta_columns(2)
-        col1.markdown(comment_1, True)
-        col2.markdown(comment_2, True)
+    # if info_selectbox == "Lưu ý chung":
+    #     col1, col2  = st.beta_columns(2)
+    #     col1.markdown(comment_1, True)
+    #     col2.markdown(comment_2, True)
 
     # Add Text in explaination
     st.set_option('deprecation.showPyplotGlobalUse', False)
 
     ### Model result
-    st.markdown(h3,unsafe_allow_html=True)        
-    result_img = Image.open("image/result_visualization.png")
-    result_comparison = pd.read_csv('data/AC_result.csv',sep=',', index_col=0)
-
+    st.markdown(h3,unsafe_allow_html=True)
     
     #Description about result
     st.markdown("""<p><span style="font-size: 14px;">Trong qu&aacute; tr&igrave;nh x&acirc;y dựng m&ocirc; h&igrave;nh dự đo&aacute;n v&agrave; ph&acirc;n t&iacute;ch, nh&oacute;m đ&atilde; thực hiện nhiều bước pre-process kh&aacute;c nhau dựa v&agrave;o phần ph&acirc;n t&iacute;ch data c&ugrave;ng với việc thực nghiệm tr&ecirc;n nhiều m&ocirc; h&igrave;nh kh&aacute;c nhau để dự đo&aacute;n. Tuy nhi&ecirc;n để tr&aacute;nh g&acirc;y bối rối cho người đọc, nh&oacute;m chỉ chọn lọc ra bước pre-processing được sử dụng ch&iacute;nh c&ugrave;ng 5 models cho ra kết quả cao nhất.</span></p>""", unsafe_allow_html=True)
     
-    # 1. Pre-processing
-    st.subheader("1. Tiền xử lí dữ liệu")
-    col1, col2  = st.beta_columns(2)
-    col1.markdown(pre_process_1, True)
-    col2.markdown(pre_process_2, True)
 
     #2. Evaluation metric
-    st.subheader("2. Phương pháp đánh giá")
+    st.subheader("1. Phương pháp đánh giá")
     st.markdown(metric,True)
 
     # 3. result
-    st.subheader("3. Kết quả")
-    st.image(result_img, use_column_width=True)
-    st.dataframe(result_comparison.style.highlight_max(axis=0))
-    st.markdown(result_analysis, True)
+    st.subheader("2. Kết quả")
+    result_img = Image.open("image/result_visualization.png")
 
-    ### Add decision tree image
-    st.markdown(decision_tree_note, True)
-    decisiontree_img = Image.open("image/decision_tree.png")
-    my_expander = st.beta_expander("Decision Tree Result", expanded=True)
-    with my_expander:
-        st.image(decisiontree_img, use_column_width=True)
-        # st.markdown(comment_decision_tree, True)
+    col1, col2  = st.beta_columns(2)
+    st.image(result_img, use_column_width=True)
+    st.markdown(result_analysis_02, True)
 
 
     # 4 Benefit calculation
@@ -675,28 +724,92 @@ def main():
     with st.form(key='my-form'):
         total_cus = st.number_input('Tổng số khách hàng liên hệ:', value = 0)
         submit = st.form_submit_button(label = 'Calculate')
-        save_cost = 20*int(total_cus)*0.852168 - 10*int(total_cus)
+        save_cost = round((20*int(total_cus)*0.852168 - 10*int(total_cus)),1)
         if submit:
             a = st.write(f'Lợi nhuận thu được là: {save_cost} $')
             st.session_state.a = ""
 
+def visulize_feature_importances(model_importances,model_name):
+    
+    t = model_importances['Weight'].sort_values(ascending = False).index.tolist()
+    fig = plt.figure(figsize = (12,9))
+    sns.barplot( x = model_importances.iloc[t]['Weight'], y = model_importances.iloc[t]['Feature'])
+    plt.title('The feature importance of '+ model_name)
+    plt.show()
+    col1,col2= st.beta_columns((6,2))
+    col1.pyplot(fig) 
+    # col2.dataframe(data=model_importances.iloc[t])
+    col2.markdown("""
+    <p style="text-align: center;"><span style="font-family: Arial, Helvetica, sans-serif;">Feature Weight</span></p>
+    """, unsafe_allow_html=True)
+    col2.dataframe(model_importances.iloc[t], width = 2400, height = 3200)
 
-    def my_widget(key):
-        st.subheader('Hello there!')
-        clicked = st.button("Click me " + key)
+def view_models_summary(df):
+    ## Evaluation metrics
+    st.markdown('Evaluation metrics')
+    st.write(df)
+
+def page_02():
+        # 1. Pre-processing
+        st.subheader("1. Tiền xử lí dữ liệu")
+        col1, col2  = st.beta_columns(2)
+        col1.markdown(pre_process_1, True)
+        col2.markdown(pre_process_2, True)
+
+        # 2. Detail Model result
+        st.subheader("2. Kết quả chi tiết trên các model thực nghiệm")
+        metric_df = pd.read_csv(metric_file_path, index_col= 0)
+        st.dataframe(metric_df.style.highlight_max(axis=0))
+        st.markdown(result_analysis_01, True)
+        xgboost_clf = pickle.load(open(xgboost_clf_file_path, 'rb'))
+        log_clf = pickle.load(open(log_clf_file_path, 'rb'))
+        tree_clf = pickle.load(open(tree_clf_file_path, 'rb'))
+        grboost_clf = pickle.load(open(grboost_clf_file_path, 'rb'))
+
+        ## Summary models
+
+        model_dict = {"XGBoost Classifier" : xgboost_clf
+                        ,"GradientBoost Classifier": grboost_clf
+                        ,'Decision Tree Classifier': tree_clf
+                        ,'Logistic Regressor' : log_clf}
+                    
+        ## Visualize feature importance
+        my_expander = st.beta_expander("Click để xem thêm chi tiết mức độ ảnh hưởng của các biến trên từng model!", expanded=True)
+        importance_option = [val for val in model_dict.keys()]
+        with my_expander:
+            an1, an2, an3, an4, an5, an6 = st.beta_columns(6)
+            importance_type_id = an1.selectbox('Chọn model:',options = importance_option)
+        
+            model = model_dict[importance_type_id]
+            features = [i for i in marketing_df.columns.values.tolist() if i!= 'y']
+            model_importances = pd.DataFrame({'Feature': features})
+            if model == log_clf:
+                model_importances['Weight']= model.coef_[0]
+            else:
+                model_importances['Weight']= model.feature_importances_
+            visulize_feature_importances(model_importances,importance_type_id)
+            if importance_type_id == "Decision Tree Classifier":
+                ### Add decision tree image
+                decisiontree_img = Image.open("image/decision_tree.png")
+                st.image(decisiontree_img, use_column_width=True)
 
     
-    
+def main():
+
+    predict_option = ['Project Overview','Reference']
+    predict_type_id = st.sidebar.selectbox('CHOOSE INFORMATION',options = predict_option)
+
+    if (predict_type_id  == predict_option[0]):
+        page_01()
+    elif (predict_type_id  == predict_option[1]):
+        page_02()
+
+
     # if add_selectbox == "Email":
     #     st.map(df)
 
 if __name__=='__main__':
     Res=main()
- 
-    
-
-
-    
     
    
 # streamlit run apps/data_analysis.py
