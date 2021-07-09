@@ -22,8 +22,21 @@ st.set_page_config(layout="wide")
 # Load data
 file_path = "data/bank-additional-full.csv"
 na_lst = ["NA","","#NA","unknown"]
+
+# model result
+result_comparison = pd.read_csv('data/AC_result.csv',sep=',', index_col=0)
+metric_file_path = "data/AC_result.csv"
+xgboost_clf_file_path = "model/pkl_xgboost_model.pkl"
+log_clf_file_path = "model/pkl_log_model.pkl"
+tree_clf_file_path = "model/pkl_decisionT_model.pkl"
+grboost_clf_file_path = "model/pkl_grboost_model.pkl"
+
+# Load data
 marketing_df = pd.read_csv(file_path, sep=';')
 marketing_null = pd.read_csv(file_path, sep=';', na_values = na_lst, keep_default_na = True) 
+metric_df = pd.read_csv(metric_file_path, index_col= 0)
+result_img = Image.open("image/result_visualization.png")
+
 # Def Visualization
 na_lst = ["NA","","#NA","unknown"]
 
@@ -390,7 +403,7 @@ result_analysis_01 = """
 """
 
 result_analysis_02 = """
-<p style="line-height: 1.5;"><span style="font-size: 14px; font-family: Calibri, sans-serif;">Trong qu&aacute; tr&igrave;nh thực nghiệm, nh&oacute;m đ&atilde; thực hiện training tr&ecirc;n nhiều loại model kh&aacute;c nhau. Biểu đồ đầu ti&ecirc;n thể hiện mức độ t&iacute;n nhiệm của 4 model m&agrave; nh&oacute;m đ&aacute;nh gi&aacute; cho ra kết quả AC tốt nhất. Trong c&aacute;c model đ&atilde; đ&aacute;nh gi&aacute;, nh&oacute;m quyết định chọn model XGBoost Classifier để đưa v&agrave;o ứng dụng thực tế với kết quả cao nhất tr&ecirc;n Recall l&agrave; 0.934489 v&agrave; tr&ecirc;n Accuracy l&agrave; 0.891246.</span></p>
+<p style="line-height: 1.5;"><span style="font-size: 14px; font-family: Calibri, sans-serif;">Trong qu&aacute; tr&igrave;nh thực nghiệm, nh&oacute;m đ&atilde; thực hiện training tr&ecirc;n nhiều loại model kh&aacute;c nhau. Biểu đồ đầu ti&ecirc;n thể hiện mức độ t&iacute;n nhiệm của 4 model m&agrave; nh&oacute;m đ&aacute;nh gi&aacute; cho ra kết quả AC tốt nhất. Trong c&aacute;c model đ&atilde; đ&aacute;nh gi&aacute;, nh&oacute;m quyết định chọn model XGBoost Classifier để đưa v&agrave;o ứng dụng thực tế với kết quả cao nhất tr&ecirc;n Recall l&agrave; 0.939611 v&agrave; tr&ecirc;n Accuracy l&agrave; 0.888015.</span></p>
 
 """
 
@@ -476,15 +489,6 @@ insight_02 = """
 # comment_decision_tree = """
 
 # """
-
-
-# model result
-result_comparison = pd.read_csv('data/AC_result.csv',sep=',', index_col=0)
-metric_file_path = "data/AC_result.csv"
-xgboost_clf_file_path = "model/pkl_xgboost_model.pkl"
-log_clf_file_path = "model/pkl_log_model.pkl"
-tree_clf_file_path = "model/pkl_decisionT_model.pkl"
-grboost_clf_file_path = "model/pkl_grboost_model.pkl"
 
 def visulize_feature_importances(model_importances,model_name):
     
@@ -726,10 +730,8 @@ def page_01():
 
     # 3. result
     st.subheader("2. Kết quả")
-    result_img = Image.open("image/result_visualization.png")
-
-    col1, col2  = st.beta_columns(2)
     st.image(result_img, use_column_width=True)
+    st.dataframe(metric_df.style.highlight_max(axis=0))
     st.markdown(result_analysis_02, True)
 
 
@@ -745,32 +747,6 @@ def page_01():
             a = st.write(f'Lợi nhuận thu được là: {save_cost} $')
             st.session_state.a = ""
 
-    ## Summary models
-
-        model_dict = {"XGBoost Classifier" : xgboost_clf
-                        ,"GradientBoost Classifier": grboost_clf
-                        ,'Decision Tree Classifier': tree_clf
-                        ,'Logistic Regressor' : log_clf}
-                    
-        ## Visualize feature importance
-        my_expander = st.beta_expander("Click để xem thêm chi tiết mức độ ảnh hưởng của các biến trên từng model!", expanded=True)
-        importance_option = [val for val in model_dict.keys()]
-        with my_expander:
-            an1, an2, an3, an4, an5, an6 = st.beta_columns(6)
-            importance_type_id = an1.selectbox('Chọn model:',options = importance_option)
-        
-            model = model_dict[importance_type_id]
-            features = [i for i in marketing_df.columns.values.tolist() if i!= 'y']
-            model_importances = pd.DataFrame({'Feature': features})
-            if model == log_clf:
-                model_importances['Weight']= model.coef_[0]
-            else:
-                model_importances['Weight']= model.feature_importances_
-            visulize_feature_importances(model_importances,importance_type_id)
-            if importance_type_id == "Decision Tree Classifier":
-                ### Add decision tree imag
-                decisiontree_img = Image.open("image/decision_tree.png")
-                st.image(decisiontree_img, use_column_width=True)
 
 
 def view_models_summary(df):
@@ -787,17 +763,43 @@ def page_02():
 
         # 2. Detail Model result
         st.subheader("2. Kết quả chi tiết trên các model thực nghiệm")
-        metric_df = pd.read_csv(metric_file_path, index_col= 0)
         st.dataframe(metric_df.style.highlight_max(axis=0))
         st.markdown(result_analysis_01, True)
+
+        ## Summary models
         xgboost_clf = pickle.load(open(xgboost_clf_file_path, 'rb'))
         log_clf = pickle.load(open(log_clf_file_path, 'rb'))
         tree_clf = pickle.load(open(tree_clf_file_path, 'rb'))
         grboost_clf = pickle.load(open(grboost_clf_file_path, 'rb'))
 
+        model_dict = {"XGBoost Classifier" : xgboost_clf
+                        ,"GradientBoost Classifier": grboost_clf
+                        ,'Decision Tree Classifier': tree_clf
+                        ,'Logistic Regressor' : log_clf}
+                        
+        ## Visualize feature importance
+        my_expander = st.beta_expander("Click để xem thêm chi tiết mức độ ảnh hưởng của các biến trên từng model!", expanded=True)
+        importance_option = [val for val in model_dict.keys()]
+
+        with my_expander:
+            an1, an2, an3, an4, an5, an6 = st.beta_columns(6)
+            importance_type_id = an1.selectbox('Chọn model:',options = importance_option)
+
+            model = model_dict[importance_type_id]
+            features = [i for i in marketing_df.columns.values.tolist() if i!= 'y']
+            model_importances = pd.DataFrame({'Feature': features})
+            if model == log_clf:
+                model_importances['Weight']= model.coef_[0]
+            else:
+                model_importances['Weight']= model.feature_importances_
+            visulize_feature_importances(model_importances,importance_type_id)
+            if importance_type_id == "Decision Tree Classifier":
+                ### Add decision tree imag
+                decisiontree_img = Image.open("image/decision_tree.png")
+                st.image(decisiontree_img, use_column_width=True)
+
                 
 def main():
-
     predict_option = ['Project Overview','Reference']
     predict_type_id = st.sidebar.selectbox('CHOOSE INFORMATION',options = predict_option)
 
